@@ -1,0 +1,60 @@
+/* Style for navbar */
+.navbar {
+  background-color: #f8f9fa;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+}
+
+/* Style for navbar brand */
+.navbar-brand {
+  font-weight: bold; /* Bold text */
+}
+
+.navbar-nav {
+  display: flex; /* Display list items in a row */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.nav-button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  color: #007bff; /* Bootstrap primary color */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 5px 10px; /* Add padding */
+}
+
+.nav-button:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for navbar links */
+.nav-link {
+  margin-right: 15px; /* Add some spacing between links */
+  color: #007bff; /* Bootstrap primary color */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.login-section {
+  /*position: absolute;*/
+  /*right: 10px;*/
+}
+
+#content1 {
+  text-align: center;
+}
+
+p {
+  font-style: italic;
+  text-align: center;
+}

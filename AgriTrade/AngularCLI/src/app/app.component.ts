@@ -6,7 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'AgriTrade';
-  navItems = ['View producers', 'Explore map'];
-  isAuthenticated = false
 }

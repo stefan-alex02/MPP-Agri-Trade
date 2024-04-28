@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{ title }}</a>
+  <div class="navbar-content">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngFor="let item of navItems">
+        <button mat-button class="nav-button">{{ item }}</button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!isAuthenticated" class="login-section">
+    <button mat-button class="login-button" (click)="pressLogin()">Login</button>  </div>
+</nav>
+
+<br>
+
+<router-outlet></router-outlet>

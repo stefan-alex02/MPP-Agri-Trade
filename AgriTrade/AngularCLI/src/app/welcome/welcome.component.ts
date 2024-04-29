@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {MatButton} from "@angular/material/button";
-import {AuthService} from "../../services/auth.service";
 import {NgIf} from "@angular/common";
 import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-welcome',
@@ -17,11 +17,17 @@ import {Router} from "@angular/router";
 export class WelcomeComponent {
   title = 'AgriTrade';
 
-  constructor(protected authService: AuthService, private router: Router) {}
+  constructor(private router: Router, protected authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.checkSession();
+  }
 
   onLoginClick() {
     this.router
       .navigate(['/login'])
       .then(r => console.log(r));
   }
+
+  protected readonly localStorage = localStorage;
 }

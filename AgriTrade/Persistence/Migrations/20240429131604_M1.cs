@@ -35,9 +35,21 @@ namespace Persistence.Migrations
                 name: "FK_Users_Address_AddressId",
                 table: "Users");
 
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Quantity",
+                table: "Quantity");
+
             migrationBuilder.DropIndex(
                 name: "IX_Quantity_ProducerId",
                 table: "Quantity");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Quantity_ProductId",
+                table: "Quantity");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ProductCategory",
+                table: "ProductCategory");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Product",
@@ -60,8 +72,20 @@ namespace Persistence.Migrations
                 table: "Quantity");
 
             migrationBuilder.DropColumn(
+                name: "ProductId",
+                table: "Quantity");
+
+            migrationBuilder.DropColumn(
                 name: "Unit",
                 table: "Quantity");
+
+            migrationBuilder.RenameTable(
+                name: "Quantity",
+                newName: "Quantities");
+
+            migrationBuilder.RenameTable(
+                name: "ProductCategory",
+                newName: "ProductCategories");
 
             migrationBuilder.RenameTable(
                 name: "Product",
@@ -75,15 +99,10 @@ namespace Persistence.Migrations
                 name: "Address",
                 newName: "Addresses");
 
-            migrationBuilder.RenameColumn(
-                name: "ProductId",
-                table: "Quantity",
-                newName: "ReferencedStockId");
-
             migrationBuilder.RenameIndex(
-                name: "IX_Quantity_ProductId",
-                table: "Quantity",
-                newName: "IX_Quantity_ReferencedStockId");
+                name: "IX_Quantity_OrderId",
+                table: "Quantities",
+                newName: "IX_Quantities_OrderId");
 
             migrationBuilder.RenameIndex(
                 name: "IX_Product_CategoryId",
@@ -151,6 +170,40 @@ namespace Persistence.Migrations
                 oldClrType: typeof(int),
                 oldType: "INTEGER");
 
+            migrationBuilder.AddColumn<DateTime>(
+                name: "Date",
+                table: "Review",
+                type: "TEXT",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AlterColumn<int>(
+                name: "OrderId",
+                table: "Quantities",
+                type: "INTEGER",
+                nullable: false,
+                defaultValue: 0,
+                oldClrType: typeof(int),
+                oldType: "INTEGER",
+                oldNullable: true);
+
+            migrationBuilder.AddColumn<int>(
+                name: "StockId",
+                table: "Quantities",
+                type: "INTEGER",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_Quantities",
+                table: "Quantities",
+                column: "Id");
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ProductCategories",
+                table: "ProductCategories",
+                column: "Id");
+
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Products",
                 table: "Products",
@@ -167,7 +220,7 @@ namespace Persistence.Migrations
                 column: "Id");
 
             migrationBuilder.CreateTable(
-                name: "Quantities",
+                name: "Stocks",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -180,27 +233,39 @@ namespace Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Quantities", x => x.Id);
+                    table.PrimaryKey("PK_Stocks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Quantities_Products_ProductId",
+                        name: "FK_Stocks_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Quantities_Users_ProducerId",
+                        name: "FK_Stocks_Users_ProducerId",
                         column: x => x.ProducerId,
                         principalTable: "Users",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Quantities_ProducerId",
+                name: "IX_Users_Username",
+                table: "Users",
+                column: "Username",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Quantities_StockId_OrderId",
                 table: "Quantities",
+                columns: new[] { "StockId", "OrderId" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Stocks_ProducerId",
+                table: "Stocks",
                 column: "ProducerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Quantities_ProductId",
-                table: "Quantities",
+                name: "IX_Stocks_ProductId",
+                table: "Stocks",
                 column: "ProductId");
 
             migrationBuilder.AddForeignKey(
@@ -212,25 +277,27 @@ namespace Persistence.Migrations
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Products_ProductCategory_CategoryId",
+                name: "FK_Products_ProductCategories_CategoryId",
                 table: "Products",
                 column: "CategoryId",
-                principalTable: "ProductCategory",
+                principalTable: "ProductCategories",
                 principalColumn: "Id");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Quantity_Orders_OrderId",
-                table: "Quantity",
+                name: "FK_Quantities_Orders_OrderId",
+                table: "Quantities",
                 column: "OrderId",
                 principalTable: "Orders",
-                principalColumn: "Id");
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Quantity_Quantities_ReferencedStockId",
-                table: "Quantity",
-                column: "ReferencedStockId",
-                principalTable: "Quantities",
-                principalColumn: "Id");
+                name: "FK_Quantities_Stocks_StockId",
+                table: "Quantities",
+                column: "StockId",
+                principalTable: "Stocks",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Users_Addresses_AddressId",
@@ -248,27 +315,43 @@ namespace Persistence.Migrations
                 table: "Orders");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Products_ProductCategory_CategoryId",
+                name: "FK_Products_ProductCategories_CategoryId",
                 table: "Products");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Quantity_Orders_OrderId",
-                table: "Quantity");
+                name: "FK_Quantities_Orders_OrderId",
+                table: "Quantities");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Quantity_Quantities_ReferencedStockId",
-                table: "Quantity");
+                name: "FK_Quantities_Stocks_StockId",
+                table: "Quantities");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Users_Addresses_AddressId",
                 table: "Users");
 
             migrationBuilder.DropTable(
-                name: "Quantities");
+                name: "Stocks");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Users_Username",
+                table: "Users");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_Quantities",
+                table: "Quantities");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Quantities_StockId_OrderId",
+                table: "Quantities");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Products",
                 table: "Products");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ProductCategories",
+                table: "ProductCategories");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Orders",
@@ -278,9 +361,25 @@ namespace Persistence.Migrations
                 name: "PK_Addresses",
                 table: "Addresses");
 
+            migrationBuilder.DropColumn(
+                name: "Date",
+                table: "Review");
+
+            migrationBuilder.DropColumn(
+                name: "StockId",
+                table: "Quantities");
+
+            migrationBuilder.RenameTable(
+                name: "Quantities",
+                newName: "Quantity");
+
             migrationBuilder.RenameTable(
                 name: "Products",
                 newName: "Product");
+
+            migrationBuilder.RenameTable(
+                name: "ProductCategories",
+                newName: "ProductCategory");
 
             migrationBuilder.RenameTable(
                 name: "Orders",
@@ -290,15 +389,10 @@ namespace Persistence.Migrations
                 name: "Addresses",
                 newName: "Address");
 
-            migrationBuilder.RenameColumn(
-                name: "ReferencedStockId",
-                table: "Quantity",
-                newName: "ProductId");
-
             migrationBuilder.RenameIndex(
-                name: "IX_Quantity_ReferencedStockId",
+                name: "IX_Quantities_OrderId",
                 table: "Quantity",
-                newName: "IX_Quantity_ProductId");
+                newName: "IX_Quantity_OrderId");
 
             migrationBuilder.RenameIndex(
                 name: "IX_Products_CategoryId",
@@ -380,6 +474,14 @@ namespace Persistence.Migrations
                 oldType: "INTEGER",
                 oldNullable: true);
 
+            migrationBuilder.AlterColumn<int>(
+                name: "OrderId",
+                table: "Quantity",
+                type: "INTEGER",
+                nullable: true,
+                oldClrType: typeof(int),
+                oldType: "INTEGER");
+
             migrationBuilder.AddColumn<float>(
                 name: "Price",
                 table: "Quantity",
@@ -393,6 +495,12 @@ namespace Persistence.Migrations
                 type: "INTEGER",
                 nullable: true);
 
+            migrationBuilder.AddColumn<int>(
+                name: "ProductId",
+                table: "Quantity",
+                type: "INTEGER",
+                nullable: true);
+
             migrationBuilder.AddColumn<string>(
                 name: "Unit",
                 table: "Quantity",
@@ -400,8 +508,18 @@ namespace Persistence.Migrations
                 nullable: true);
 
             migrationBuilder.AddPrimaryKey(
+                name: "PK_Quantity",
+                table: "Quantity",
+                column: "Id");
+
+            migrationBuilder.AddPrimaryKey(
                 name: "PK_Product",
                 table: "Product",
+                column: "Id");
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ProductCategory",
+                table: "ProductCategory",
                 column: "Id");
 
             migrationBuilder.AddPrimaryKey(
@@ -418,6 +536,11 @@ namespace Persistence.Migrations
                 name: "IX_Quantity_ProducerId",
                 table: "Quantity",
                 column: "ProducerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Quantity_ProductId",
+                table: "Quantity",
+                column: "ProductId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Order_Users_OrderedById",

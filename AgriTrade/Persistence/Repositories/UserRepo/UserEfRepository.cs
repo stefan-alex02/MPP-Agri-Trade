@@ -20,13 +20,14 @@ public class UserEfRepository(IDatabaseContext context) : IUserRepository, IDisp
     }
 
     public IEnumerable<User> GetAll() {
-        var consumers = context.Users.OfType<Consumer>()
-            .Include(c => c.PastOrders)
-            .ToList();
-
-        var otherUsers = context.Users.Where(u => !(u is Consumer)).ToList();
-
-        return consumers.Cast<User>().Concat(otherUsers).ToList();
+        // var consumers = context.Users.OfType<Consumer>()
+        //     .Include(c => c.PastOrders)
+        //     .ToList();
+        //
+        // var otherUsers = context.Users.Where(u => !(u is Consumer)).ToList();
+        //
+        // return consumers.Cast<User>().Concat(otherUsers).ToList();
+        return context.Users.ToList();
     }
 
     public void Remove(User entity) {

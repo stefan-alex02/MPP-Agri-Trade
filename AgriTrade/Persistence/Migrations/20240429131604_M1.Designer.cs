@@ -11,7 +11,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240427150312_M1")]
+    [Migration("20240429131604_M1")]
     partial class M1
     {
         /// <inheritdoc />
@@ -60,6 +60,9 @@ namespace Persistence.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
@@ -131,7 +134,7 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCategory");
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("Domain.Products.Quantity", b =>
@@ -143,19 +146,20 @@ namespace Persistence.Migrations
                     b.Property<float>("Amount")
                         .HasColumnType("REAL");
 
-                    b.Property<int?>("OrderId")
+                    b.Property<int>("OrderId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ReferencedStockId")
+                    b.Property<int>("StockId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("ReferencedStockId");
+                    b.HasIndex("StockId", "OrderId")
+                        .IsUnique();
 
-                    b.ToTable("Quantity");
+                    b.ToTable("Quantities");
                 });
 
             modelBuilder.Entity("Domain.Products.Stock", b =>
@@ -185,7 +189,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Quantities");
+                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("Domain.Users.User", b =>
@@ -221,6 +225,9 @@ namespace Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AddressId");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Users");
 
@@ -280,15 +287,21 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Products.Quantity", b =>
                 {
-                    b.HasOne("Domain.Products.Order", null)
+                    b.HasOne("Domain.Products.Order", "Order")
                         .WithMany("Products")
-                        .HasForeignKey("OrderId");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Domain.Products.Stock", "ReferencedStock")
+                    b.HasOne("Domain.Products.Stock", "Stock")
                         .WithMany()
-                        .HasForeignKey("ReferencedStockId");
+                        .HasForeignKey("StockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("ReferencedStock");
+                    b.Navigation("Order");
+
+                    b.Navigation("Stock");
                 });
 
             modelBuilder.Entity("Domain.Products.Stock", b =>

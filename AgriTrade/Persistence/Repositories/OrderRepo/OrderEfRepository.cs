@@ -24,6 +24,6 @@ public class OrderEfRepository(IDatabaseContext context) : IOrderRepository, IDi
     }
 
     public void Dispose() {
-        throw new NotImplementedException();
+        context.Dispose();
     }
 }

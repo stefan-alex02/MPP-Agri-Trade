@@ -445,6 +445,9 @@
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.3.24172.4"
+        },
         "runtime": {
           "Domain.dll": {}
         }

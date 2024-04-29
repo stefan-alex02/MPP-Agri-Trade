@@ -5,10 +5,21 @@
       <li class="nav-item" *ngFor="let item of navItems">
         <button mat-button class="nav-button">{{ item }}</button>
       </li>
+      <li>
+        <button mat-button class="nav-button" *ngIf="authService.isConsumer()" routerLink="/customer-dashboard">Customer Dashboard</button>
+      </li>
+      <li>
+        <button mat-button class="nav-button" *ngIf="authService.isProducer()" routerLink="/producer-dashboard">Producer Dashboard</button>
+      </li>
     </ul>
   </div>
-  <div *ngIf="!isAuthenticated" class="login-section">
-    <button mat-button class="login-button" (click)="pressLogin()">Login</button>  </div>
+  <div *ngIf="!authService.isAuthenticated()" class="login-section">
+    <button mat-button class="login-button" (click)="pressLogin()">Login</button>
+  </div>
+  <div *ngIf="authService.isAuthenticated()" class="logout-section">
+  <button mat-button class="logout-button" (click)="pressLogout()">Logout</button>
+</div>
+
 </nav>
 
 <br>

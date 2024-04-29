@@ -1,7 +1,7 @@
 ﻿namespace Domain.Users;
 
 public enum UserType {
-    NoType,
-    Consumer,
-    Producer
+    NoType = 0,
+    Consumer = 1,
+    Producer = 2,
 }

@@ -1,4 +1,5 @@
-﻿using Domain.Details;
+﻿using System.ComponentModel.DataAnnotations;
+using Domain.Details;
 
 namespace Domain.Users;
 

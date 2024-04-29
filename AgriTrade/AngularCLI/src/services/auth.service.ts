@@ -1,37 +1,71 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
+import {Observable, tap} from "rxjs";
+import config from '../config.json';
+import {UserType} from "../utils/user-type";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private loginUrl = 'http://localhost'; // replace with your login endpoint
-
-  private _isAuthenticated = false;
-  private _userCredentials: any;
+  private loginUrl = config.baseUrl + '/api/user/login';
+  private logoutUrl = config.baseUrl + '/api/user/logout';
+  private sessionUrl = config.baseUrl + '/api/user/session';
 
   constructor(private http: HttpClient) { }
 
-  get isAuthenticated(): boolean {
-    return this._isAuthenticated;
+  saveAuthData(userType: number): void {
+    localStorage.setItem('userType', userType.toString());
+    localStorage.setItem('isAuthenticated', 'true');
   }
 
-  set isAuthenticated(value: boolean) {
-    this._isAuthenticated = value;
+  clearAuthData(): void {
+    localStorage.removeItem('userType');
+    localStorage.removeItem('isAuthenticated');
   }
 
-  get userCredentials(): any {
-    return this._userCredentials;
+  isAuthenticated(): boolean {
+    return localStorage.getItem('isAuthenticated') === 'true';
   }
 
-  set userCredentials(value: any) {
-    this._userCredentials = value;
+  getUserType(): number {
+    if (!this.isAuthenticated()) {
+      return -1;
+    }
+    return parseInt(localStorage.getItem('userType')!);
+  }
+
+  isConsumer(): boolean {
+    return this.getUserType() === UserType.Consumer;
+  }
+
+  isProducer(): boolean {
+    return this.getUserType() === UserType.Producer;
   }
 
   login(username: string, password: string): Observable<any> {
-    console.log('AuthService.login');
-    const credentials = { username, password };
-    return this.http.post(this.loginUrl, credentials);
+    console.log('Sending login request to:', this.loginUrl);
+
+    const loginRequest = { username, password };
+
+    return this.http.post<any>(this.loginUrl, loginRequest, { withCredentials: true }).pipe(
+      tap(response => {
+        console.log('Login response:', response)
+        this.saveAuthData(response.userType);
+      })
+    );
+  }
+
+  logout(): Observable<any> {
+    return this.http.post<any>(this.logoutUrl, {}, { withCredentials: true }).pipe(
+      tap(() => {
+        // Clear the user type and authentication status from the localStorage
+        this.clearAuthData();
+      })
+    );
+  }
+
+  checkSession(): Observable<any> {
+    return this.http.get<any>(this.sessionUrl, { withCredentials: true });
   }
 }

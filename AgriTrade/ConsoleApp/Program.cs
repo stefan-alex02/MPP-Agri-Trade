@@ -4,6 +4,7 @@ using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
 using Persistence.Repositories.OrderRepo;
+using Persistence.Repositories.StockRepo;
 using Persistence.Repositories.UserRepo;
 using Persistence.UnitOfWork;
 
@@ -21,9 +22,10 @@ optionsBuilder.UseSqlite(ConfigurationManager
 IDatabaseContext dataBaseContext = new DatabaseContext(optionsBuilder.Options);
 IUserRepository userRepository = new UserEfRepository(dataBaseContext);
 IOrderRepository orderRepository = new OrderEfRepository(dataBaseContext);
+IStockRepository stockRepository = new StockEfRepository(dataBaseContext);
 
 IUnitOfWork unitOfWork = 
-    new UnitOfWork(dataBaseContext, userRepository, orderRepository);
+    new UnitOfWork(dataBaseContext, userRepository, orderRepository, stockRepository);
 
 var users = userRepository.GetAll();
 // var orders = orderRepository.GetAll();

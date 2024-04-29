@@ -3,6 +3,7 @@ import {MatButton} from "@angular/material/button";
 import {MatFormField, MatInput, MatInputModule} from "@angular/material/input";
 import {AuthService} from "../../services/auth.service";
 import {FormsModule} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -21,16 +22,17 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onLoginClick() {
-    this.authService.login(this.username, this.password).subscribe(
-      response => {
-        // handle successful login
+    this.authService.login(this.username, this.password).subscribe({
+      next: () => {
+        this.router.navigate(['/'])
+          .then(r => console.log('Navigated to /'));
       },
-      error => {
-        // handle error
+      error: (error) => {
+        console.error('Login failed:', error);
       }
-    );
+    });
   }
 }

@@ -3,21 +3,30 @@
 namespace Domain.Products;
 
 public class Quantity : Entity<int> {
-    public Stock? ReferencedStock { get; set; }
+    [ForeignKey("Stock")]
+    public int StockId { get; set; }
+    public Stock? Stock { get; set; }
+
+    [ForeignKey("Order")]
+    public int OrderId { get; set; }
+    public Order? Order { get; set; }
     public float Amount { get; set; }
 
     [NotMapped]
     public float Price =>
-        (ReferencedStock ?? 
-         throw new NullReferenceException(nameof(ReferencedStock))
+        (Stock ??
+         throw new NullReferenceException(nameof(Stock))
         ).Price * Amount;
 
     public Quantity() : base(default) {
     }
-    
-    public Quantity(int id, Stock? referencedStock, float amount) : 
+
+    public Quantity(int id, Stock? stock, Order? order, float amount) :
         base(id) {
-        ReferencedStock = referencedStock;
+        Stock = stock;
+        Order = order;
+        StockId = stock?.Id ?? default;
+        OrderId = order?.Id ?? default;
         Amount = amount;
     }
 }

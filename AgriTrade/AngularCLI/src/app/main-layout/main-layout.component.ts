@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import {MatButton} from "@angular/material/button";
-import {NgForOf, NgIf} from "@angular/common";
-import {RouterOutlet} from "@angular/router";
+import {Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-main-layout',
@@ -11,9 +10,46 @@ import {RouterOutlet} from "@angular/router";
 export class MainLayoutComponent {
   title = 'AgriTrade';
   navItems = ['View producers', 'Explore map'];
-  isAuthenticated = false
+
+  constructor(private router: Router, protected authService: AuthService) {}
+
+  ngOnInit() {
+    if (!this.authService.isAuthenticated()) {
+      console.log('User is logged in');
+      return;
+    }
+
+    this.authService.checkSession().subscribe({
+      next: () => {
+        console.log('Session is still active');
+      },
+      error: (error) => {
+        if (error.status === 450) {
+          console.log('No session found');
+        } else {
+          console.error('Error checking session:', error);
+        }
+      }
+    });
+  }
 
   pressLogin() {
+    this.router
+      .navigate(['/login'])
+      .then(r => console.log(r));
+  }
 
+  pressLogout() {
+    this.authService.logout().subscribe({
+      next: () => {
+        console.log('Logout successful');
+        // Navigate to the main page
+        this.router.navigate(['/'])
+          .then(r => console.log('Navigated to main page:', r));
+      },
+      error: (error) => {
+        console.error('Logout failed:', error);
+      }
+    });
   }
 }

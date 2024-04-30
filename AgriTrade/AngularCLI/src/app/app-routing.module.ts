@@ -6,6 +6,8 @@ import {UserLayoutComponent} from "../user-management/user-layout/user-layout.co
 import {MainLayoutComponent} from "./main-layout/main-layout.component";
 import {CustomerDashboardComponent} from "./customer-dashboard/customer-dashboard.component";
 import {AuthGuard} from "../user-management/auth.guard";
+import {StockDetailsComponent} from "./stock-details/stock-details.component";
+import {ExploreMapComponent} from "./explore-map/explore-map.component";
 
 const routes: Routes = [
   {
@@ -14,6 +16,8 @@ const routes: Routes = [
     children: [
       { path: '', component: WelcomeComponent},
       { path: 'customer-dashboard', component: CustomerDashboardComponent, canActivate: [AuthGuard] },
+      { path: 'stocks/:id', component: StockDetailsComponent, canActivate: [AuthGuard]},
+      { path: 'explore-map', component: ExploreMapComponent },
     ]
   },
   {

@@ -15,7 +15,11 @@ public class StockEfRepository(IDatabaseContext context) : IStockRepository, IDi
     }
 
     public Stock? Get(int id) {
-        throw new NotImplementedException();
+        return context.Stocks
+            .Include(s => s.Producer)
+            .Include(s => s.Product)
+            .ThenInclude(p => p!.Category)
+            .FirstOrDefault(s => s.Id == id);
     }
 
     public IEnumerable<Stock> GetAll() {

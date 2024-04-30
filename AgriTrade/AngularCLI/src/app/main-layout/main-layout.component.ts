@@ -9,7 +9,6 @@ import {AuthService} from "../../services/auth.service";
 })
 export class MainLayoutComponent {
   title = 'AgriTrade';
-  navItems = ['View producers', 'Explore map'];
 
   constructor(private router: Router, protected authService: AuthService) {}
 
@@ -51,5 +50,9 @@ export class MainLayoutComponent {
         console.error('Logout failed:', error);
       }
     });
+  }
+
+  pressProfile() {
+
   }
 }

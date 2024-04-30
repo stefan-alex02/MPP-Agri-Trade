@@ -8,11 +8,17 @@ import config from "../config.json";
   providedIn: 'root'
 })
 export class StockService {
-  private apiUrl = config.baseUrl + '/api/stock'; // replace with your actual API URL
+  private getStocksUrl = config.baseUrl + '/api/stocks';
+  private getStockUrl = config.baseUrl + '/api/stock';
+
 
   constructor(private http: HttpClient) { }
 
   getStocks(): Observable<StockDto[]> {
-    return this.http.get<StockDto[]>(this.apiUrl);
+    return this.http.get<StockDto[]>(this.getStocksUrl);
+  }
+
+  getStock(id: string): Observable<StockDto> {
+    return this.http.get<StockDto>(`${this.getStockUrl}/${id}`);
   }
 }

@@ -9,6 +9,7 @@ import {MainLayoutComponent} from "./main-layout/main-layout.component";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AuthInterceptor} from "../user-management/auth.interceptor";
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {AuthInterceptor} from "../user-management/auth.interceptor";
     MatButton,
     HttpClientModule,
     BrowserAnimationsModule,
-
+    GoogleMapsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

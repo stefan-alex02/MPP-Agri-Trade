@@ -1,4 +1,5 @@
 export interface StockDto {
+  stockId: number;
   productName: string;
   category: string;
   amount: number;

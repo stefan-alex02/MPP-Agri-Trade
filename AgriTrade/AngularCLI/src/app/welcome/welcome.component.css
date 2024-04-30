@@ -1,3 +1,20 @@
+.background {
+  background-image: url('../../assets/images/background-image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(8px);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
 #content1 {
+  background-color: rgba(255, 255, 255, 0.8); /* white with 50% opacity */
+  padding: 20px;
+  margin: 20px 100px;
+  height: 80vh;
+  box-sizing: border-box;
+  border-radius: 5px;
   text-align: center;
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
+import {UserType} from "../../utils/user-type";
 
 @Component({
   selector: 'app-main-layout',
@@ -13,23 +14,11 @@ export class MainLayoutComponent {
   constructor(private router: Router, protected authService: AuthService) {}
 
   ngOnInit() {
-    if (!this.authService.isAuthenticated()) {
+    console.log('MainLayoutComponent.ngOnInit');
+    if (!this.authService.isLoggedIn()) {
       console.log('User is logged in');
       return;
     }
-
-    this.authService.checkSession().subscribe({
-      next: () => {
-        console.log('Session is still active');
-      },
-      error: (error) => {
-        if (error.status === 450) {
-          console.log('No session found');
-        } else {
-          console.error('Error checking session:', error);
-        }
-      }
-    });
   }
 
   pressLogin() {
@@ -55,4 +44,6 @@ export class MainLayoutComponent {
   pressProfile() {
 
   }
+
+  protected readonly UserType = UserType;
 }

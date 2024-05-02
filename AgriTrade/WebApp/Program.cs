@@ -1,10 +1,14 @@
+using System.Text;
 using Business.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Persistence.Context;
 using Persistence.Repositories.OrderRepo;
 using Persistence.Repositories.StockRepo;
 using Persistence.Repositories.UserRepo;
 using Persistence.UnitOfWork;
+using WebApp.Authentication;
 using WebApp.Notifications;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,16 +24,44 @@ string connectionString = configuration.GetConnectionString("DefaultConnection")
     .Replace("{Dir}", Directory.GetParent(Environment.CurrentDirectory)!.FullName);
 
 builder.Services
-    .AddDbContext<DatabaseContext>(options => options.UseSqlite(connectionString));
-
-builder.Services
+    .AddDbContext<DatabaseContext>(options => options.UseSqlite(connectionString))
     .AddScoped<IDatabaseContext, DatabaseContext>()
     .AddScoped<IUserRepository, UserEfRepository>()
     .AddScoped<IOrderRepository, OrderEfRepository>()
     .AddScoped<IStockRepository, StockEfRepository>()
     .AddScoped<IUnitOfWork, UnitOfWork>()
     .AddScoped<UserService>()
-    .AddScoped<StockService>();
+    .AddScoped<StockService>()
+    .AddScoped<RefreshTokenMiddleware>();
+
+// Get the JWT configuration from appsettings.json
+var jwtConfig = builder.Configuration.GetSection("Jwt");
+
+TokenValidationParameters validationParameters = new TokenValidationParameters {
+    ValidateIssuer = true,
+    ValidateAudience = true,
+    ValidateLifetime = true,
+    ValidateIssuerSigningKey = true,
+    ValidIssuer = configuration["Jwt:Issuer"],
+    ValidAudience = configuration["Jwt:Audience"],
+    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!)),
+    ClockSkew = TimeSpan.Zero
+};
+
+builder.Services.Configure<JwtOptions>(options => {
+    options.TokenValidationParameters = validationParameters;
+});
+
+// Register the JwtService
+builder.Services.AddSingleton<JwtService>(serviceProvider => {
+    var issuer = jwtConfig["Issuer"];
+    var audience = jwtConfig["Audience"];
+    var key = jwtConfig["Key"];
+    var tokenLifetime = TimeSpan.Parse(jwtConfig["TokenLifetime"]); // Use appropriate parsing for TimeSpan
+    
+    // Initialize and return the JwtService
+    return new JwtService(issuer, audience, key, tokenLifetime);
+});
 
 builder.Services.AddControllers().AddJsonOptions(options => {
     options.JsonSerializerOptions.ReferenceHandler = 
@@ -44,26 +76,23 @@ builder.Services.AddSignalR();
 
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAngularApp",
-        policyBuilder =>
-        {
+        policyBuilder => {
             policyBuilder.WithOrigins("http://localhost:4200")
-                .AllowAnyHeader()
                 .AllowAnyMethod()
-                .AllowCredentials(); // Allow credentials
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .WithExposedHeaders("Authorization", "abc");
         });
 });
 
-builder.Services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(0.25);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options => {
+        options.TokenValidationParameters = validationParameters;
+    });
 
-    // Add SameSite and Secure policy
-    options.Cookie.SameSite = SameSiteMode.None;
-    options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Only if using HTTPS
-});
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -81,7 +110,10 @@ app.UseSession();
 
 app.UseCors("AllowAngularApp");
 
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<RefreshTokenMiddleware>();
+
 app.MapControllers();
 
 app.Run();

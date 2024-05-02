@@ -27,6 +27,7 @@ export class LoginComponent {
   onLoginClick() {
     this.authService.login(this.username, this.password).subscribe({
       next: () => {
+        console.log("User is logged in");
         this.router.navigate(['/'])
           .then(r => console.log('Navigated to /'));
       },

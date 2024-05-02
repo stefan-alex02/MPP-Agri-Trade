@@ -15,7 +15,7 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       { path: '', component: WelcomeComponent},
-      { path: 'customer-dashboard', component: CustomerDashboardComponent, canActivate: [AuthGuard] },
+      { path: 'customer-dashboard', component: CustomerDashboardComponent },
       { path: 'stocks/:id', component: StockDetailsComponent, canActivate: [AuthGuard]},
       { path: 'explore-map', component: ExploreMapComponent },
     ]

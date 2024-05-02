@@ -16,12 +16,12 @@
       </li>
     </ul>
   </div>
-  <div *ngIf="!authService.isAuthenticated()" class="login-section">
+  <div *ngIf="!authService.isLoggedIn()" class="login-section">
     <button mat-button class="login-button" (click)="pressLogin()">Login</button>
   </div>
-  <div *ngIf="authService.isAuthenticated()" class="logout-section">
+  <div *ngIf="authService.isLoggedIn()" class="logout-section">
     <button mat-button class="logout-button" (click)="pressProfile()">Hello, <span>
-      {{ authService.getUserType() }}
+      {{ UserType[authService.getUserRole()] }}
     </span></button>
     <button mat-button class="logout-button" (click)="pressLogout()">Logout</button>
   </div>

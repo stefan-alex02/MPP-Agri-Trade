@@ -1,7 +1,5 @@
-﻿using Domain.Users;
-
-namespace WebApp.Models;
+﻿namespace WebApp.Models;
 
 public class LoginResponse {
-    public UserType UserType { get; set; }
+    public string Token { get; set; }
 }

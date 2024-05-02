@@ -1,25 +1,28 @@
 ﻿using Business.Exceptions;
 using Business.Services;
 using Domain.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Authentication;
 using WebApp.Models;
 
 namespace WebApp.Controllers;
 
-public class UserController(UserService userService) : Controller {
+public class UserController(UserService userService, JwtService jwtService) : Controller {
     [HttpPost("api/user/login")]
     public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest loginRequest) {
         try {
             User user = userService.Login(loginRequest.Username, loginRequest.Password);
             
-            HttpContext.Session.SetString("User_ID", user.Id.ToString());
-            HttpContext.Session.SetString("User_Username", user.Username!);
+            var token = jwtService.GenerateToken(user);
             
-            Console.WriteLine($"Session created for {user.Username} with ID {user.Id}");
-            Console.WriteLine($"Session ID: {HttpContext.Session.Id}");
+            Console.WriteLine($"User {user.Username} logged in with ID {user.Id}");
+            
+            Response.Headers["Authorization"] = $"Bearer {token}";
+            Response.Headers["abc"] = $"Bearerrrrr";
             
             LoginResponse loginResponse = new LoginResponse {
-                UserType = user.UserType
+                Token = token,
             };
             
             return Ok(loginResponse);
@@ -33,29 +36,14 @@ public class UserController(UserService userService) : Controller {
     }
     
     [HttpPost("api/user/logout")]
+    [Authorize]
     public async Task<ActionResult<HttpResponse>> Logout() {
-        Console.WriteLine($"Session ID before clear: {HttpContext.Session.Id}");
-
-        // Clear the session data on the server side
-        HttpContext.Session.Clear();
-
-        // Delete the session cookie
-        HttpContext.Response.Cookies.Delete("ASP.NET_SessionId");
-        
-        Console.WriteLine($"Session ID after clear: {HttpContext.Session.Id}");
-
-        return Ok();
-    }
-    
-    [HttpGet("api/user/session")]
-    public async Task<ActionResult> GetSession() {
-        string? userId = HttpContext.Session.GetString("User_ID");
-        string? username = HttpContext.Session.GetString("User_Username");
-        
-        if (userId == null || username == null) {
-            return StatusCode(401, "No session found");
+        if (!HttpContext.User.Identity.IsAuthenticated) {
+            return Unauthorized();
         }
         
+        Console.WriteLine("User logging out");
+
         return Ok();
     }
 }

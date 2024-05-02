@@ -22,6 +22,7 @@ export class CustomerDashboardComponent implements OnInit {
   constructor(private stockService: StockService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log('CustomerDashboardComponent.ngOnInit');
     this.loadStocks();
   }
 

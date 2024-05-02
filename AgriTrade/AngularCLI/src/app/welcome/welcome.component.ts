@@ -20,7 +20,6 @@ export class WelcomeComponent {
   constructor(private router: Router, protected authService: AuthService) {}
 
   ngOnInit(): void {
-    this.authService.checkSession();
   }
 
   onLoginClick() {

@@ -83,3 +83,11 @@ C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\
 C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\obj\Debug\net8.0\WebApp.pdb
 C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\obj\Debug\net8.0\ref\WebApp.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

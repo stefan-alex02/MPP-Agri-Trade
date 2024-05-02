@@ -19,7 +19,6 @@ export class AuthGuard implements CanActivate {
     //     .then(r => console.log('Navigated to main page:', r));
     //   return of(false);
     // }
-
-    return this.authService.checkSession();
+    return of(true);
   }
 }

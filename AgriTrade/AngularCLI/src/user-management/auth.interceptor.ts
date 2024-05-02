@@ -5,7 +5,6 @@ import {
   HttpInterceptor,
   HttpRequest,
   HttpResponse,
-  HttpResponseBase
 } from '@angular/common/http';
 import {EMPTY, Observable, tap} from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -42,7 +41,8 @@ export class AuthInterceptor implements HttpInterceptor {
         if (error.status === 401 || error.status === 403) {
           // Clear authentication data and possibly redirect
           this.authService.clearAuthData();
-          this.router.navigate(['/login']);
+          this.router.navigate(['/login'])
+            .then(r => console.log('Redirected to login'));
         }
 
         // Return the error as an observable

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
 import {UserType} from "../../utils/user-type";
+import {AuthGuard} from "../../user-management/auth.guard";
 
 @Component({
   selector: 'app-main-layout',
@@ -11,14 +12,16 @@ import {UserType} from "../../utils/user-type";
 export class MainLayoutComponent {
   title = 'AgriTrade';
 
-  constructor(private router: Router, protected authService: AuthService) {}
+  constructor(private router: Router, protected authService: AuthService,
+              private authGuard: AuthGuard) {}
 
   ngOnInit() {
     console.log('MainLayoutComponent.ngOnInit');
-    if (!this.authService.isLoggedIn()) {
-      console.log('User is logged in');
-      return;
-    }
+    // if (!this.authService.isLoggedIn() && this.router.url !== '') {
+    //   this.router.navigate(['/'])
+    //     .then(r => console.log('Navigated to main page:', r));
+    //   return;
+    // }
   }
 
   pressLogin() {
@@ -46,4 +49,18 @@ export class MainLayoutComponent {
   }
 
   protected readonly UserType = UserType;
+
+  refreshCustomerDashboard() {
+    if (!this.authGuard.checkAuthentication()) {
+      return;
+    }
+    this.router.navigate(['/customer-dashboard']);
+   }
+
+  refreshProducerDashboard() {
+    if (!this.authGuard.checkAuthentication()) {
+      return;
+    }
+    this.router.navigate(['/producer-dashboard']);
+  }
 }

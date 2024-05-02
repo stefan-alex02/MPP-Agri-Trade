@@ -9,10 +9,16 @@
         <button mat-button class="nav-button" routerLink="/explore-map">Explore map</button>
       </li>
       <li>
-        <button mat-button class="nav-button" *ngIf="authService.isConsumer()" routerLink="/customer-dashboard">Customer Dashboard</button>
+        <button mat-button class="nav-button" *ngIf="authService.isConsumer()"
+                (click)="refreshCustomerDashboard()">
+          Customer Dashboard
+        </button>
       </li>
       <li>
-        <button mat-button class="nav-button" *ngIf="authService.isProducer()" routerLink="/producer-dashboard">Producer Dashboard</button>
+        <button mat-button class="nav-button" *ngIf="authService.isProducer()"
+                (click)="refreshProducerDashboard()">
+          Producer Dashboard
+        </button>
       </li>
     </ul>
   </div>

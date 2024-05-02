@@ -4,14 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace WebApp.Authentication;
 
-public class RefreshTokenMiddleware : IMiddleware {
-    private readonly JwtService _jwtService;
-    private readonly TokenValidationParameters _tokenValidationParameters;
-
-    public RefreshTokenMiddleware(JwtService jwtService, IOptions<JwtOptions> options) {
-        _jwtService = jwtService;
-        _tokenValidationParameters = options.Value.TokenValidationParameters;
-    }
+public class RefreshTokenMiddleware(JwtService jwtService, IOptions<JwtOptions> options) : IMiddleware {
+    private readonly TokenValidationParameters _tokenValidationParameters = options.Value.TokenValidationParameters;
 
     public async Task InvokeAsync(HttpContext context, RequestDelegate next) {
         var authHeader = context.Request.Headers["Authorization"].ToString();
@@ -38,7 +32,7 @@ public class RefreshTokenMiddleware : IMiddleware {
                     // If the token is close to expiration (within 5 minutes), refresh it
                     if (remainingLifetime < TimeSpan.FromMinutes(5)) {
                         // Generate a new token using the existing claims
-                        var newToken = _jwtService.GenerateToken(principal.Claims.ToArray());
+                        var newToken = jwtService.GenerateToken(principal.Claims.ToArray());
 
                         // Set the new token in the response header
                         context.Response.Headers["Authorization"] = "Bearer " + newToken;

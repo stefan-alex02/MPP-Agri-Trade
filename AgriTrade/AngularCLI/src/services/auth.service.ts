@@ -59,6 +59,9 @@ export class AuthService {
   }
 
   getUserRole() {
+    if (!this.isLoggedIn()) {
+      return UserType.None;
+    }
     return Number(localStorage.getItem('user_role'));
   }
 

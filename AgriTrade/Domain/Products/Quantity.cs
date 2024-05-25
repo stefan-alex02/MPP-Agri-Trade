@@ -5,11 +5,11 @@ namespace Domain.Products;
 public class Quantity : Entity<int> {
     [ForeignKey("Stock")]
     public int StockId { get; set; }
-    public Stock? Stock { get; set; }
+    public Stock Stock { get; set; } = null!;
 
     [ForeignKey("Order")]
     public int OrderId { get; set; }
-    public Order? Order { get; set; }
+    public Order Order { get; set; } = null!;
     public float Amount { get; set; }
 
     [NotMapped]
@@ -21,7 +21,7 @@ public class Quantity : Entity<int> {
     public Quantity() : base(default) {
     }
 
-    public Quantity(int id, Stock? stock, Order? order, float amount) :
+    public Quantity(int id, Stock stock, Order order, float amount) :
         base(id) {
         Stock = stock;
         Order = order;

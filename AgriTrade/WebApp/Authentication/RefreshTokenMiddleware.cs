@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using Domain.Users;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -8,7 +9,7 @@ public class RefreshTokenMiddleware(JwtService jwtService, IOptions<JwtOptions> 
     private readonly TokenValidationParameters _tokenValidationParameters = options.Value.TokenValidationParameters;
 
     public async Task InvokeAsync(HttpContext context, RequestDelegate next) {
-        var authHeader = context.Request.Headers["Authorization"].ToString();
+        var authHeader = context.Request.Headers.Authorization.ToString();
     
         // Check if the Authorization header contains a Bearer token and it is not null
         if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer ") &&
@@ -29,13 +30,18 @@ public class RefreshTokenMiddleware(JwtService jwtService, IOptions<JwtOptions> 
                     // Calculate the remaining lifetime of the token
                     var remainingLifetime = jwtToken.ValidTo - DateTime.UtcNow;
                 
-                    // If the token is close to expiration (within 5 minutes), refresh it
-                    if (remainingLifetime < TimeSpan.FromMinutes(5)) {
+                    // If the token is close to expiration (within specified window), refresh it
+                    if (remainingLifetime.TotalMilliseconds < 
+                        jwtService.JwtSettings.RefreshWindow.TotalMilliseconds) {
+                        int userId = int.Parse(principal.FindFirst("user_id").Value);
+                        string username = principal.FindFirst("username").Value;
+                        UserType userType = (UserType)int.Parse(principal.FindFirst("user_type").Value);
+                        
                         // Generate a new token using the existing claims
-                        var newToken = jwtService.GenerateToken(principal.Claims.ToArray());
+                        var newToken = jwtService.GenerateToken(userId, username, userType);
 
                         // Set the new token in the response header
-                        context.Response.Headers["Authorization"] = "Bearer " + newToken;
+                        context.Response.Headers.Authorization = "Bearer " + newToken;
                     }
                 }
             }

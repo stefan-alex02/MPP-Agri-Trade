@@ -4,11 +4,11 @@ import {RouterModule, RouterOutlet} from '@angular/router';
 import {AppComponent} from "./app.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {MatButton} from "@angular/material/button";
-import {UserLayoutComponent} from "../user-management/user-layout/user-layout.component";
+import {UserLayoutComponent} from "./user-management/user-layout/user-layout.component";
 import {MainLayoutComponent} from "./main-layout/main-layout.component";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {AuthInterceptor} from "../user-management/auth.interceptor";
+import {AuthInterceptor} from "../guards/auth.interceptor";
 import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({

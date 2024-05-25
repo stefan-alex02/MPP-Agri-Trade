@@ -1,5 +1,5 @@
 ﻿namespace WebApp.Models;
 
-public class LoginResponse {
-    public string Token { get; set; }
+public class LoginResponse(string token) {
+    public string Token { get; set; } = token;
 }

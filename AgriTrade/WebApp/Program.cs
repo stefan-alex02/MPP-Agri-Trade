@@ -54,13 +54,16 @@ builder.Services.Configure<JwtOptions>(options => {
 
 // Register the JwtService
 builder.Services.AddSingleton<JwtService>(serviceProvider => {
-    var issuer = jwtConfig["Issuer"];
-    var audience = jwtConfig["Audience"];
-    var key = jwtConfig["Key"];
-    var tokenLifetime = TimeSpan.Parse(jwtConfig["TokenLifetime"]); // Use appropriate parsing for TimeSpan
+    var jwtSettings = new JwtSettings {
+        Issuer = jwtConfig["Issuer"],
+        Audience = jwtConfig["Audience"],
+        Key = jwtConfig["Key"],
+        TokenLifetime = TimeSpan.Parse(jwtConfig["TokenLifetime"]),
+        RefreshWindow = TimeSpan.Parse(jwtConfig["RefreshWindow"])
+    };
     
     // Initialize and return the JwtService
-    return new JwtService(issuer, audience, key, tokenLifetime);
+    return new JwtService(jwtSettings);
 });
 
 builder.Services.AddControllers().AddJsonOptions(options => {

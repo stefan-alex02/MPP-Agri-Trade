@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
-import {UserType} from "../../utils/user-type";
-import {AuthGuard} from "../../user-management/auth.guard";
+import {UserType} from "../../models/user-type";
+import {RoleGuard} from "../../guards/role.guard";
 
 @Component({
   selector: 'app-main-layout',
@@ -13,7 +13,7 @@ export class MainLayoutComponent {
   title = 'AgriTrade';
 
   constructor(private router: Router, protected authService: AuthService,
-              private authGuard: AuthGuard) {}
+              private authGuard: RoleGuard) {}
 
   ngOnInit() {
     console.log('MainLayoutComponent.ngOnInit');
@@ -51,16 +51,10 @@ export class MainLayoutComponent {
   protected readonly UserType = UserType;
 
   refreshCustomerDashboard() {
-    if (!this.authGuard.checkAuthentication()) {
-      return;
-    }
     this.router.navigate(['/customer-dashboard']);
    }
 
   refreshProducerDashboard() {
-    if (!this.authGuard.checkAuthentication()) {
-      return;
-    }
     this.router.navigate(['/producer-dashboard']);
   }
 }

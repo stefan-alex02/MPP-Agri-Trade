@@ -6,7 +6,7 @@ import {
   HttpRequest,
   HttpResponse,
 } from '@angular/common/http';
-import {EMPTY, Observable, tap} from 'rxjs';
+import {Observable, tap} from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import {AuthService} from "../services/auth.service";
@@ -24,6 +24,8 @@ export class AuthInterceptor implements HttpInterceptor {
       }
     });
 
+    console.log('Intercepted HTTP call', authReq);
+
     return next.handle(authReq).pipe(
       tap((event: HttpEvent<any>) => {
         console.log(event);
@@ -31,22 +33,24 @@ export class AuthInterceptor implements HttpInterceptor {
           // Handle the HttpResponse, e.g., extract headers
           const newToken = event.headers.get('Authorization');
           if (newToken) {
-            console.log('New token', newToken);
-            this.authService.saveAuthData(newToken.replace('Bearer ', ''));
+            console.log('[Interceptor] New token: ', newToken);
+            this.authService.saveJwtToken(newToken.replace('Bearer ', ''));
           }
         }
       }),
       catchError((error) => {
-        // Handle any errors (e.g., 401 Unauthorized)
+        // Handle any errors
         if (error.status === 401 || error.status === 403) {
           // Clear authentication data and possibly redirect
-          this.authService.clearAuthData();
+          this.authService.clearJwtToken();
           this.router.navigate(['/login'])
-            .then(r => console.log('Redirected to login'));
+            .then(r => console.log('Redirected to login:', r));
         }
 
+        console.log('Intercepted error:', error);
+
         // Return the error as an observable
-        return EMPTY;
+        throw error;
       })
     );
 

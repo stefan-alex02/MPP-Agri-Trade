@@ -27,6 +27,4 @@ export class WelcomeComponent {
       .navigate(['/login'])
       .then(r => console.log(r));
   }
-
-  protected readonly localStorage = localStorage;
 }

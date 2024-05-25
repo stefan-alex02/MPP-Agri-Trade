@@ -9,20 +9,12 @@ import config from "../config.json";
 })
 export class StockService {
   private getStocksUrl = config.baseUrl + '/api/stocks';
-  private getStockUrl = config.baseUrl + '/api/stock';
+  private getStockUrl = config.baseUrl + '/api/stocks';
 
   constructor(private http: HttpClient) { }
 
-  getToken(): string | null {
-    return localStorage.getItem('token');
-  }
-
   getStocks(): Observable<StockDto[]> {
-    return this.http.get<StockDto[]>(this.getStocksUrl, {
-      headers: {
-        'Authorization': `Bearer ${this.getToken()}`
-      }
-    });
+    return this.http.get<StockDto[]>(this.getStocksUrl);
   }
 
   getStock(id: string): Observable<StockDto> {

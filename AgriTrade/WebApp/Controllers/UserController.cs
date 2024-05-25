@@ -9,21 +9,16 @@ using WebApp.Models;
 namespace WebApp.Controllers;
 
 public class UserController(UserService userService, JwtService jwtService) : Controller {
-    [HttpPost("api/user/login")]
-    public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest loginRequest) {
+    [HttpPost("api/users/login")]
+    public ActionResult<LoginResponse> Login([FromBody] LoginRequest loginRequest) {
         try {
             User user = userService.Login(loginRequest.Username, loginRequest.Password);
-            
-            var token = jwtService.GenerateToken(user);
+            var token = jwtService.GenerateToken(user.Id, user.Username, user.UserType);
             
             Console.WriteLine($"User {user.Username} logged in with ID {user.Id}");
             
             Response.Headers["Authorization"] = $"Bearer {token}";
-            Response.Headers["abc"] = $"Bearerrrrr";
-            
-            LoginResponse loginResponse = new LoginResponse {
-                Token = token,
-            };
+            LoginResponse loginResponse = new LoginResponse(token);
             
             return Ok(loginResponse);
         }
@@ -35,10 +30,10 @@ public class UserController(UserService userService, JwtService jwtService) : Co
         }
     }
     
-    [HttpPost("api/user/logout")]
+    [HttpPost("api/users/logout")]
     [Authorize]
-    public async Task<ActionResult<HttpResponse>> Logout() {
-        if (!HttpContext.User.Identity.IsAuthenticated) {
+    public ActionResult<HttpResponse> Logout() {
+        if (HttpContext.User.Identity is not { IsAuthenticated: true }) {
             return Unauthorized();
         }
         

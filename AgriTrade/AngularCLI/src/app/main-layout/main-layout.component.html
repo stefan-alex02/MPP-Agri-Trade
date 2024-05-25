@@ -9,13 +9,13 @@
         <button mat-button class="nav-button" routerLink="/explore-map">Explore map</button>
       </li>
       <li>
-        <button mat-button class="nav-button" *ngIf="authService.isConsumer()"
+        <button mat-button class="nav-button" *ngIf="authService.getUserType() === UserType.Consumer"
                 (click)="refreshCustomerDashboard()">
           Customer Dashboard
         </button>
       </li>
       <li>
-        <button mat-button class="nav-button" *ngIf="authService.isProducer()"
+        <button mat-button class="nav-button" *ngIf="authService.getUserType() === UserType.Producer"
                 (click)="refreshProducerDashboard()">
           Producer Dashboard
         </button>
@@ -27,7 +27,7 @@
   </div>
   <div *ngIf="authService.isLoggedIn()" class="logout-section">
     <button mat-button class="logout-button" (click)="pressProfile()">Hello, <span>
-      {{ UserType[authService.getUserRole()] }}
+      {{ UserType[authService.getUserType()] }}
     </span></button>
     <button mat-button class="logout-button" (click)="pressLogout()">Logout</button>
   </div>

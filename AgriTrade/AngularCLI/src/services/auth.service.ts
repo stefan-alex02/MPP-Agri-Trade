@@ -4,81 +4,23 @@ import {Observable, tap} from "rxjs";
 import config from '../config.json';
 import {jwtDecode} from "jwt-decode";
 import moment from 'moment';
-import {UserType} from "../utils/user-type";
+import {UserType} from "../models/user-type";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private loginUrl = config.baseUrl + '/api/user/login';
-  private logoutUrl = config.baseUrl + '/api/user/logout';
+  private loginUrl = config.baseUrl + '/api/users/login';
+  private logoutUrl = config.baseUrl + '/api/users/logout';
 
   constructor(private http: HttpClient) {}
 
-  saveAuthData(token: string): void {
-    const decodedToken: any = jwtDecode(token);
-
-    console.log(decodedToken);
-
-    localStorage.setItem('token', token);
-    localStorage.setItem('id', decodedToken.user_id);
-    localStorage.setItem('username', decodedToken.username);
-    localStorage.setItem('user_role', decodedToken.user_role);
-    localStorage.setItem('expires_at', decodedToken.exp);
-  }
-
-  clearAuthData(): void {
-    localStorage.removeItem('token');
-    localStorage.removeItem('id');
-    localStorage.removeItem('username');
-    localStorage.removeItem('user_role');
-    localStorage.removeItem('expires_at');
-  }
-
-  public getToken() {
-    return localStorage.getItem('token');
-  }
-
-  getExpiration() {
-    const expiration = localStorage.getItem("expires_at");
-    const expiresAt = JSON.parse(expiration!);
-
-    return moment.unix(expiresAt);
-  }
-
-  public isLoggedIn() {
-    if (!moment().isBefore(this.getExpiration())) {
-      this.clearAuthData();
-      return false;
-    }
-    return true;
-  }
-
-  isLoggedOut() {
-    return !this.isLoggedIn();
-  }
-
-  getUserRole() {
-    if (!this.isLoggedIn()) {
-      return UserType.None;
-    }
-    return Number(localStorage.getItem('user_role'));
-  }
-
-  isConsumer() {
-    return this.getUserRole() === UserType.Consumer;
-  }
-
-  isProducer() {
-    return this.getUserRole() === UserType.Producer;
-  }
-
   login(username: string, password: string): Observable<any> {
-    const loginRequest = { username, password };
 
-    return this.http.post<any>(this.loginUrl, loginRequest, { withCredentials: true }).pipe(
+    return this.http.post<any>(this.loginUrl, { username, password },
+      { withCredentials: true }).pipe(
       tap((response) => {
-        this.saveAuthData(response.token); // Save the JWT token and decode it
+        this.saveJwtToken(response.token);
       })
     );
   }
@@ -86,8 +28,67 @@ export class AuthService {
   logout(): Observable<any> {
     return this.http.post<any>(this.logoutUrl, {}, { withCredentials: true }).pipe(
       tap(() => {
-        this.clearAuthData();
+        this.clearJwtToken();
       })
     );
+  }
+
+  saveJwtToken(token: string): void {
+    const decodedToken: any = jwtDecode(token);
+    console.log('Decoded token: ', decodedToken);
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('id', decodedToken.user_id);
+    localStorage.setItem('username', decodedToken.username);
+    localStorage.setItem('name', decodedToken.name);
+    localStorage.setItem('user_type', decodedToken.user_type);
+    localStorage.setItem('expires_at', decodedToken.exp);
+
+    console.log('Token saved');
+  }
+
+  clearJwtToken(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('name');
+    localStorage.removeItem('user_type');
+    localStorage.removeItem('expires_at');
+
+    console.log('Token removed');
+  }
+
+  public getToken() {
+    return localStorage.getItem('token');
+  }
+
+  public isLoggedIn(): boolean {
+    if (this.getToken() === null) {
+      return false;
+    }
+    if (this.isTokenExpired()) {
+      this.clearJwtToken();
+      return false;
+    }
+    return true;
+  }
+
+  isTokenExpired(): boolean {
+    const expiration = localStorage.getItem("expires_at");
+    const expiresAt = JSON.parse(expiration!);
+    console.log('Expires at: ', moment.unix(expiresAt).format('YYYY-MM-DD HH:mm:ss'));
+    return moment().isAfter(moment.unix(expiresAt));
+  }
+
+  public getUserId(): number {
+    return Number(localStorage.getItem('id') ?? -1);
+  }
+
+  public getUserType(): UserType {
+    return Number(localStorage.getItem('user_type'));
+  }
+
+  public getName(): string {
+    return localStorage.getItem('name') ?? '';
   }
 }

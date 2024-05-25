@@ -2,9 +2,9 @@
 
 public class Address : Entity<int> {
     public int Number { get; set; }
-    public string Street { get; set; }
-    public string City { get; set; }
-    public string County { get; set; }
+    public string Street { get; set; } = null!;
+    public string City { get; set; } = null!;
+    public string County { get; set; } = null!;
     public int ZipCode { get; set; }
     public float Latitude { get; set; }
     public float Longitude { get; set; }

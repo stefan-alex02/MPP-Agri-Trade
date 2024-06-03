@@ -4,6 +4,7 @@ using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
 using Persistence.Repositories.OrderRepo;
+using Persistence.Repositories.ReviewRepo;
 using Persistence.Repositories.StockRepo;
 using Persistence.Repositories.UserRepo;
 using Persistence.UnitOfWork;
@@ -23,9 +24,10 @@ IDatabaseContext dataBaseContext = new DatabaseContext(optionsBuilder.Options);
 IUserRepository userRepository = new UserEfRepository(dataBaseContext);
 IOrderRepository orderRepository = new OrderEfRepository(dataBaseContext);
 IStockRepository stockRepository = new StockEfRepository(dataBaseContext);
+IReviewRepository reviewRepository = new ReviewEfRepository(dataBaseContext);
 
 IUnitOfWork unitOfWork = 
-    new UnitOfWork(dataBaseContext, userRepository, orderRepository, stockRepository);
+    new UnitOfWork(dataBaseContext, userRepository, orderRepository, stockRepository, reviewRepository);
 
 var users = userRepository.GetAll();
 // var orders = orderRepository.GetAll();

@@ -4,6 +4,6 @@
   <p>Quantity: {{item.quantity}}</p>
   <p>Price: ${{item.stock.price}}</p>
   <p>Total: ${{item.quantity * item.stock.price}}</p>
-  <button (click)="removeProduct(item.stock)">Remove from basket</button>
+  <button mat-button (click)="removeProduct(item.stock)">Remove from basket</button>
 </div>
 <h2>Total Price: ${{totalPrice}}</h2>

@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { StockDto } from '../models/stock-dto';
+import { Stock } from '../models/stock';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BasketService {
-  private basket: {stock: StockDto, quantity: number}[] = [];
+  private basket: {stock: Stock, quantity: number}[] = [];
 
   constructor() { }
 
-  addProduct(product: StockDto): void {
+  addProduct(product: Stock): void {
     const found = this.basket.find(item => item.stock.productName === product.productName);
     if (found) {
       found.quantity += 1;
@@ -18,7 +18,7 @@ export class BasketService {
     }
   }
 
-  removeProduct(product: StockDto): void {
+  removeProduct(product: Stock): void {
     const index = this.basket.findIndex(item => item.stock.productName === product.productName);
     if (index !== -1) {
       if (this.basket[index].quantity > 1) {
@@ -29,7 +29,7 @@ export class BasketService {
     }
   }
 
-  getBasket(): {stock: StockDto, quantity: number}[] {
+  getBasket(): {stock: Stock, quantity: number}[] {
     return this.basket;
   }
 

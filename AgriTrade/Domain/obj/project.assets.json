@@ -538,24 +538,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/sebastian/.nuget/packages/": {}
+    "C:\\Users\\andre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/Domain.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/Domain.csproj",
-      "packagesPath": "/Users/sebastian/.nuget/packages/",
-      "outputPath": "/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/",
+      "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sebastian/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -595,7 +597,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/sebastian/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

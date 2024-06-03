@@ -8,7 +8,8 @@ public class StockDto(
     string unit,
     float price,
     string producerFirstName,
-    string producerLastName) {
+    string producerLastName,
+    string description) {
     public int StockId { get; set; } = stockId;
     public string ProductName { get; set; } = productName;
     public string Category { get; set; } = category;
@@ -17,4 +18,5 @@ public class StockDto(
     public float Price { get; set; } = price;
     public string ProducerFirstName { get; set; } = producerFirstName;
     public string ProducerLastName { get; set; } = producerLastName;
+    public string Description { get; set; } = description;
 }

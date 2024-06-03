@@ -1,15 +1,23 @@
+using System.Reflection;
 using System.Text;
+using System.Xml;
 using Business.Services;
+using log4net;
+using log4net.Config;
+using log4net.Repository.Hierarchy;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Persistence.Context;
 using Persistence.Repositories.OrderRepo;
+using Persistence.Repositories.ReviewRepo;
 using Persistence.Repositories.StockRepo;
 using Persistence.Repositories.UserRepo;
 using Persistence.UnitOfWork;
 using WebApp.Authentication;
 using WebApp.Notifications;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +37,7 @@ builder.Services
     .AddScoped<IUserRepository, UserEfRepository>()
     .AddScoped<IOrderRepository, OrderEfRepository>()
     .AddScoped<IStockRepository, StockEfRepository>()
+    .AddScoped<IReviewRepository,ReviewEfRepository>()
     .AddScoped<IUnitOfWork, UnitOfWork>()
     .AddScoped<UserService>()
     .AddScoped<StockService>()
@@ -96,6 +105,9 @@ builder.Services
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
+// Configure log4net
+var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
+XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
 var app = builder.Build();
 

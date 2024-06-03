@@ -13,6 +13,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
     public DbSet<Address> Addresses { get; set; }
     public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<Quantity> Quantities { get; set; }
+    public DbSet<Review> Reviews { get; set; }
 
     public DatabaseContext() 
         : this(new DbContextOptionsBuilder<DatabaseContext>().Options) { }

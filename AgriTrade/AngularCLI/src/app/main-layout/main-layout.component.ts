@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
 import {UserType} from "../../models/user-type";
 import {RoleGuard} from "../../guards/role.guard";
+import {BasketService} from "../../services/basket.service";
+
 
 @Component({
   selector: 'app-main-layout',
@@ -12,7 +14,7 @@ import {RoleGuard} from "../../guards/role.guard";
 export class MainLayoutComponent {
   title = 'AgriTrade';
 
-  constructor(private router: Router, protected authService: AuthService,
+  constructor(private router: Router, protected authService: AuthService, protected basketService: BasketService,
               private authGuard: RoleGuard) {}
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class MainLayoutComponent {
     //   return;
     // }
   }
+
 
   pressLogin() {
     this.router
@@ -56,5 +59,9 @@ export class MainLayoutComponent {
 
   refreshProducerDashboard() {
     this.router.navigate(['/producer-dashboard']);
+  }
+
+  pressBasket() {
+    this.router.navigate(['/basket']);
   }
 }

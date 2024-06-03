@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "ocvxwNedw9Nm78rNrsv82NsqZTFESIxmy9XxEu+n9xkbYSBTp6zwC85IEAEgNtKQIJTs02NDTb8sUOk6y7Jj1w==",
+  "dgSpecHash": "A+qDEG0xe1jEQWDJYGcXLca4j7gaAMh1PFSTXmQrzS2Qt419wiK1rIJifkHS6HbrQq5YIdA3ZEQIvOUhqj2/JA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
+  "projectFilePath": "/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.9.0.0-preview.3.24172.4.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.abstractions.9.0.0-preview.3.24172.4.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0-preview.3.24172.4\\microsoft.entityframeworkcore.analyzers.9.0.0-preview.3.24172.4.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.caching.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.0-preview.3.24172.9\\microsoft.extensions.caching.memory.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0-preview.3.24172.9\\microsoft.extensions.dependencyinjection.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.logging\\9.0.0-preview.3.24172.9\\microsoft.extensions.logging.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.0-preview.3.24172.9\\microsoft.extensions.logging.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.options\\9.0.0-preview.3.24172.9\\microsoft.extensions.options.9.0.0-preview.3.24172.9.nupkg.sha512",
-    "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0-preview.3.24172.9\\microsoft.extensions.primitives.9.0.0-preview.3.24172.9.nupkg.sha512"
+    "/Users/sebastian/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.9.0.0-preview.3.24172.4.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.abstractions.9.0.0-preview.3.24172.4.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.0-preview.3.24172.4/microsoft.entityframeworkcore.analyzers.9.0.0-preview.3.24172.4.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.0-preview.3.24172.9/microsoft.extensions.caching.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.3.24172.9/microsoft.extensions.caching.memory.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-preview.3.24172.9/microsoft.extensions.dependencyinjection.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-preview.3.24172.9/microsoft.extensions.dependencyinjection.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.logging/9.0.0-preview.3.24172.9/microsoft.extensions.logging.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-preview.3.24172.9/microsoft.extensions.logging.abstractions.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.options/9.0.0-preview.3.24172.9/microsoft.extensions.options.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "/Users/sebastian/.nuget/packages/microsoft.extensions.primitives/9.0.0-preview.3.24172.9/microsoft.extensions.primitives.9.0.0-preview.3.24172.9.nupkg.sha512"
   ],
   "logs": []
 }

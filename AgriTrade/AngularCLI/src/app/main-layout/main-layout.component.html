@@ -26,6 +26,9 @@
     <button mat-button class="login-button" (click)="pressLogin()">Login</button>
   </div>
   <div *ngIf="authService.isLoggedIn()" class="logout-section">
+    <button mat-button (click)="pressBasket()" class="basket-button">
+      <span>{{ basketService.getNumberOfItems() }}</span>
+    </button>
     <button mat-button class="logout-button" (click)="pressProfile()">Hello, <span>
       {{ UserType[authService.getUserType()] }}
     </span></button>

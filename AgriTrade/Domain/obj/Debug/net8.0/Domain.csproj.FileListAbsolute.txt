@@ -1,13 +1,26 @@
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.sourcelink.json
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.deps.json
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.pdb
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/refint/Domain.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.pdb
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/ref/Domain.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.deps.json
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/bin/Debug/net8.0/Domain.pdb
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/refint/Domain.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/Domain.pdb
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Domain/obj/Debug/net8.0/ref/Domain.dll

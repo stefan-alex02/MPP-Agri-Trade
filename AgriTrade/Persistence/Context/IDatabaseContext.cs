@@ -11,6 +11,7 @@ public interface IDatabaseContext : IDisposable {
     public DbSet<Product> Products { get; set; }
     public DbSet<Stock> Stocks { get; set; }
     public DbSet<Address> Addresses { get; set; }
+    public DbSet<Review> Reviews { get; set; }
     public DbSet<ProductCategory> ProductCategories { get; set; }
     
     public int SaveChanges();

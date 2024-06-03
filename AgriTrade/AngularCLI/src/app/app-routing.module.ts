@@ -8,6 +8,7 @@ import {CustomerDashboardComponent} from "./customer-dashboard/customer-dashboar
 import {StockDetailsComponent} from "./stock-details/stock-details.component";
 import {ExploreMapComponent} from "./explore-map/explore-map.component";
 import {AuthGuard} from "../guards/auth.guard";
+import {BasketComponent} from "./basket/basket.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
         canActivate: [AuthGuard]},
       { path: 'explore-map', component: ExploreMapComponent,
         canActivate: [AuthGuard]},
+      { path:'basket', component: BasketComponent }
     ]
   },
   {

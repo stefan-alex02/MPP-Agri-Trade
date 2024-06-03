@@ -1,0 +1,9 @@
+<h1>Your Basket</h1>
+<div *ngFor="let item of basketItems">
+  <h2>{{item.stock.productName}}</h2>
+  <p>Quantity: {{item.quantity}}</p>
+  <p>Price: ${{item.stock.price}}</p>
+  <p>Total: ${{item.quantity * item.stock.price}}</p>
+  <button mat-button (click)="removeProduct(item.stock)">Remove from basket</button>
+</div>
+<h2>Total Price: ${{totalPrice}}</h2>

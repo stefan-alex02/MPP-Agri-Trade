@@ -3,3 +3,6 @@
 <p>Amount: {{stock.amount}} {{stock.unit}}</p>
 <p>Price: ${{stock.price}}</p>
 <p>Producer: {{stock.producerFirstName}} {{stock.producerLastName}}</p>
+<p>Description: {{stock.description}}</p>
+<button mat-button class="product-button" (click)="$event.stopPropagation(); addToCart(stock)">Add to cart</button>
+

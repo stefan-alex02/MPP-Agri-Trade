@@ -171,6 +171,10 @@ namespace Persistence.Migrations
                     b.Property<float>("Amount")
                         .HasColumnType("REAL");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<float>("Price")
                         .HasColumnType("REAL");
 

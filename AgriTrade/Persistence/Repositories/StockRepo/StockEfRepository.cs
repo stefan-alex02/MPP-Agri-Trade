@@ -1,11 +1,14 @@
 ﻿using System.Linq.Expressions;
 using Domain.Products;
+using log4net;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
 
 namespace Persistence.Repositories.StockRepo;
 
 public class StockEfRepository(IDatabaseContext context) : IStockRepository, IDisposable {
+    private static readonly ILog log = LogManager.GetLogger("StockEfRepository");
+
     public void Add(Stock entity) {
         throw new NotImplementedException();
     }
@@ -15,6 +18,7 @@ public class StockEfRepository(IDatabaseContext context) : IStockRepository, IDi
     }
 
     public Stock? Get(int id) {
+        log.InfoFormat("Getting stock by id {0}", id);
         return context.Stocks
             .Include(s => s.Producer)
             .Include(s => s.Product)
@@ -23,6 +27,7 @@ public class StockEfRepository(IDatabaseContext context) : IStockRepository, IDi
     }
 
     public IEnumerable<Stock> GetAll() {
+        log.Info("Getting all stocks");
         return context.Stocks
             .Include(s => s.Producer)
             .Include(s => s.Product)

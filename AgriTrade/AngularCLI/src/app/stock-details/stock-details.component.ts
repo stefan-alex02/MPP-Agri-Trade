@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StockService } from '../../services/stock.service';
-import { StockDto } from '../../models/stock-dto';
+import { Stock } from '../../models/stock';
+import {MatButton} from "@angular/material/button";
+import {BasketService} from "../../services/basket.service";
 
 @Component({
   selector: 'app-stock-details',
   templateUrl: './stock-details.component.html',
   standalone: true,
+  imports: [
+    MatButton
+  ],
   styleUrls: ['./stock-details.component.css']
 })
 export class StockDetailsComponent implements OnInit {
-  stock: StockDto = {} as StockDto;
+  stock: Stock = {} as Stock;
 
   constructor(
     private route: ActivatedRoute,
-    private stockService: StockService
+    private stockService: StockService,
+    private basketService: BasketService
   ) { }
 
   ngOnInit(): void {
@@ -26,5 +32,9 @@ export class StockDetailsComponent implements OnInit {
         this.stock = stock;
       });
     });
+  }
+
+  addToCart(stock: Stock) {
+    this.basketService.addProduct(stock);
   }
 }

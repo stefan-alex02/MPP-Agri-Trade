@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{ title }}</a>
+  <div class="navbar-content">
+    <ul class="navbar-nav">
+      <li>
+        <button mat-button class="nav-button" routerLink="/">View producers</button>
+      </li>
+      <li>
+        <button mat-button class="nav-button" routerLink="/explore-map">Explore map</button>
+      </li>
+      <li>
+        <button mat-button class="nav-button" *ngIf="authService.getUserType() === UserType.Consumer"
+                (click)="refreshCustomerDashboard()">
+          Customer Dashboard
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-button" *ngIf="authService.getUserType() === UserType.Producer"
+                (click)="refreshProducerDashboard()">
+          Producer Dashboard
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!authService.isLoggedIn()" class="login-section">
+    <button mat-button class="login-button" (click)="pressLogin()">Login</button>
+    <button mat-button routerLink="/register" class="btn btn-primary">Sign up</button>
+  </div>
+  <div *ngIf="authService.isLoggedIn()" class="logout-section">
+    <button mat-button (click)="pressBasket()" class="basket-button">
+      <span>{{ basketService.getNumberOfItems() }}</span>
+    </button>
+    <button mat-button class="logout-button" (click)="pressProfile()">Hello, <span>
+      {{ UserType[authService.getUserType()] }}
+    </span></button>
+    <button mat-button class="logout-button" (click)="pressLogout()">Logout</button>
+  </div>
+
+</nav>
+
+<router-outlet></router-outlet>

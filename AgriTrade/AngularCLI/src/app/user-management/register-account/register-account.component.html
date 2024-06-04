@@ -1,0 +1,99 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-box">
+  <h2>Register Account</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" formControlName="username" required>
+    <mat-error *ngIf="registerForm.get('username')?.invalid">Please enter a valid username</mat-error>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutGap="20px">
+    <mat-form-field>
+      <input matInput type="email" placeholder="Email" formControlName="email" required>
+      <mat-error *ngIf="registerForm.get('email')?.invalid">Please enter a valid email</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="dob">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="20px">
+    <mat-form-field appearance="fill" fxFlex="50">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" formControlName="firstName" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" fxFlex="50">
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text" formControlName="lastName" required>
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="20px">
+    <mat-form-field appearance="fill" fxFlex="50">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" fxFlex="50">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" formControlName="confirmPassword" required>
+      <mat-error *ngIf="registerForm.errors?.['mustMatch']">Passwords must match</mat-error>
+    </mat-form-field>
+  </div>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+    <span mat-panel-title>
+      Address (Optional)
+    </span>
+    </mat-expansion-panel-header>
+
+    <div formGroupName="address">
+      <mat-form-field appearance="fill">
+        <mat-label>Number</mat-label>
+        <input matInput type="text" formControlName="number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Street</mat-label>
+        <input matInput type="text" formControlName="street">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>City</mat-label>
+        <input matInput type="text" formControlName="city">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>County</mat-label>
+        <input matInput type="text" formControlName="county">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Zip Code</mat-label>
+        <input matInput type="text" formControlName="zipCode">
+      </mat-form-field>
+    </div>
+  </mat-expansion-panel>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>User Type</mat-label>
+    <mat-select formControlName="userType" required>
+      <mat-option value="">Select...</mat-option>
+      <mat-option value="1">Customer</mat-option>
+      <mat-option value="2">Producer</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">Register</button>
+  <br>
+  <p>Already have an account? <a routerLink="/login">Login here</a></p>
+</form>

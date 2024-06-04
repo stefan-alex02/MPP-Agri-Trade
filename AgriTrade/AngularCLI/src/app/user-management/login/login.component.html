@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h1>Login</h1>
+  <div class="form-container">
+    <form #loginForm="ngForm" (ngSubmit)="onLoginClick()">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" placeholder="Bob" [(ngModel)]="username" name="username" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="*******" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+      <p class="error-message" *ngIf="this.errorMessage">{{ errorMessage }}</p>
+
+      <button mat-button class="login-button" type="submit" [disabled]="!loginForm.valid">Login</button>
+
+      <br>
+      <p>Don't have an account? <a routerLink="/register">Register here</a></p>
+    </form>
+  </div>
+</div>

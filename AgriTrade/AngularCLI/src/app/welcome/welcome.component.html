@@ -1,0 +1,8 @@
+<div class="background"></div>
+<div id="content1">
+  <h1>Welcome to {{ title }}</h1>
+  <p>This is a short presentation of the AgriTrade app.</p>
+  <button mat-button class="login-button"
+          *ngIf="!authService.isLoggedIn()"
+          (click)="onLoginClick()">Login</button>
+</div>

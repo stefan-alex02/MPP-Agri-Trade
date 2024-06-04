@@ -1,0 +1,383 @@
+2024-06-03 23:28:11,334 [18] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:18:51,223 [15] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:18:52,306 [20] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:18:54,116 [10] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:18:54,259 [19] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:18:57,545 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:21:02,066 [15] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:21:08,527 [15] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:21:12,367 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:21:58,174 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:22:15,894 [7] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:22:19,453 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:22:21,700 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:22:22,502 [18] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:22:24,275 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:22:24,709 [7] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:22:54,404 [7] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:22:56,028 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:22:56,719 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:22:57,517 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:22:58,164 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:22:59,084 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:23:02,865 [20] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:23:03,943 [19] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:23:04,468 [18] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:23:36,063 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:23:37,191 [20] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:23:39,823 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:23:40,370 [21] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:25:43,477 [21] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:25:45,522 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:25:46,284 [3] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:25:47,149 [3] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:25:47,511 [24] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:25:48,610 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:25:48,946 [21] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:26:43,869 [23] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:26:51,545 [27] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:31:09,293 [31] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:31:10,322 [33] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:31:51,845 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:31:51,850 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:31:54,904 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:31:54,906 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:33:57,856 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:33:57,862 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:34:12,452 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:34:13,199 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:34:13,209 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:34:14,348 [7] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:34:14,673 [4] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:34:14,678 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:34:15,729 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:34:16,222 [16] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:34:16,235 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:34:17,060 [16] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:34:17,393 [7] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:34:17,398 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:37:26,299 [23] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:37:26,300 [6] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:38:15,157 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:38:15,157 [15] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:40:49,021 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:40:49,022 [15] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:33,241 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:33,244 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:36,500 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:36,500 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:37,503 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:37,505 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:38,274 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:38,274 [20] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:45,955 [20] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:45,960 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:47,982 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:41:47,982 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:48,734 [16] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:41:48,743 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:44:56,927 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:44:56,927 [3] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:45:00,620 [10] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:45:00,623 [3] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:45:01,530 [10] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:45:01,535 [3] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:45:02,721 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:45:02,721 [10] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:45:02,940 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:45:03,773 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:45:03,784 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:45:04,549 [22] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:45:04,918 [22] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:45:04,931 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:46:15,498 [22] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:46:15,506 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:46:15,923 [22] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:46:15,924 [24] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:46:54,988 [24] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:46:55,005 [27] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:46:57,196 [25] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:46:57,198 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:47:11,108 [25] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 00:47:11,116 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:56:54,195 [30] INFO UserEfRepository - Getting user by username a
+2024-06-04 00:56:56,982 [30] INFO StockEfRepository - Getting all stocks
+2024-06-04 00:56:57,612 [30] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:56:57,627 [30] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:58:21,940 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:58:21,977 [12] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 00:59:02,929 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 00:59:02,930 [8] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:04:25,672 [15] INFO UserEfRepository - Getting user by username a
+2024-06-04 01:04:33,673 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:04:34,955 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:04:34,957 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:05:14,752 [13] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:05:14,776 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:10:35,490 [15] INFO UserEfRepository - Getting user by username a
+2024-06-04 01:10:36,921 [11] INFO UserEfRepository - Getting user by username a
+2024-06-04 01:10:40,655 [15] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:10:41,725 [13] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:10:41,729 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:12:16,878 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:12:16,879 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:12:18,420 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:12:18,421 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:12:19,452 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:12:19,452 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:18:55,039 [14] INFO UserEfRepository - Getting user by username a
+2024-06-04 01:18:56,315 [15] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:18:57,127 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:18:57,134 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:16,421 [19] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:19:16,891 [19] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:19:16,897 [19] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:17,451 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:19:17,829 [15] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:19:17,833 [19] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:18,630 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:19:19,420 [19] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:19:19,430 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:20,142 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:19:20,434 [15] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:19:20,439 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:58,697 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:19:58,707 [8] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:22:14,887 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:22:14,888 [10] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:22:27,090 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:22:27,091 [15] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:23:04,440 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:23:04,453 [13] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:23:34,161 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:23:34,169 [13] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:23:56,790 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:23:56,802 [14] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:26:53,014 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:26:57,269 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:26:57,282 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:29:31,605 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:29:34,904 [7] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:29:35,824 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:29:35,843 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:29:37,665 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:29:38,031 [7] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:29:38,037 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:31:32,332 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:31:32,332 [18] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:31:34,994 [17] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:31:34,995 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:31:35,872 [18] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:31:35,885 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:31:36,620 [17] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:31:37,243 [17] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:31:37,248 [17] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:31:37,961 [18] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:31:38,277 [18] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:31:38,284 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:07,978 [21] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:07,979 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:32:14,013 [21] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:14,013 [3] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:32:46,482 [19] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:32:46,491 [21] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:47,790 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:47,790 [23] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:32:56,299 [23] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:32:56,300 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:32:57,090 [4] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:32:57,091 [23] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:33:32,502 [4] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:33:32,504 [25] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:34:36,901 [26] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:34:36,925 [28] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:34:38,660 [28] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:34:38,679 [25] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:34:39,289 [28] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:34:39,302 [26] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:34:39,825 [25] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:34:39,840 [28] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:34:46,259 [28] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:34:46,275 [28] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:36:12,965 [31] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:36:12,993 [29] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:36:15,659 [32] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 01:36:15,676 [29] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:36:19,443 [29] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:36:19,461 [29] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:36:38,502 [22] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:36:38,528 [22] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:39:35,861 [8] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:39:37,222 [11] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:40:09,359 [10] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:40:30,331 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:40:30,471 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:41:45,556 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:41:53,404 [11] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:41:53,571 [11] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 01:50:46,125 [7] INFO UserEfRepository - Getting user by username a
+2024-06-04 01:50:48,997 [7] INFO StockEfRepository - Getting all stocks
+2024-06-04 01:50:49,816 [17] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 01:50:49,893 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:42:27,265 [15] INFO UserEfRepository - Getting user by username a
+2024-06-04 10:42:28,528 [10] INFO UserEfRepository - Getting user by username a
+2024-06-04 10:42:30,252 [7] INFO StockEfRepository - Getting all stocks
+2024-06-04 10:42:31,131 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:42:31,153 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:46:46,715 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:46:48,122 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:47:13,429 [11] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:47:24,561 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:47:59,508 [12] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:48:00,611 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:48:25,416 [13] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:48:26,654 [11] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:24,496 [20] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:24,497 [17] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:52:31,406 [15] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:31,406 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:52:41,908 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:41,908 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:52:56,079 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:56,080 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:52:58,207 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:52:58,207 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:07,484 [7] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:07,491 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:08,450 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:08,450 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:14,841 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:14,845 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:15,362 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:15,362 [15] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:24,573 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:24,573 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:26,586 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:26,588 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:53:52,462 [17] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:53:52,464 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:55:18,544 [18] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:55:18,547 [3] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:55:26,473 [3] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:55:26,473 [22] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:55:30,096 [18] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:55:30,102 [18] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:55:47,237 [22] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:55:47,238 [23] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:56:20,524 [21] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:56:20,537 [24] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:56:22,806 [21] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:56:22,820 [21] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:56:23,422 [24] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:56:23,432 [25] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:58:00,466 [20] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:58:00,477 [28] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 10:58:02,407 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 10:58:03,176 [26] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 10:58:03,185 [26] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:06:15,910 [32] INFO UserEfRepository - Getting user by username a
+2024-06-04 11:06:19,904 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:06:20,982 [20] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:06:20,993 [26] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:13:35,820 [41] INFO UserEfRepository - Getting user by username a
+2024-06-04 11:13:37,082 [41] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:13:37,695 [38] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:13:37,703 [38] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:24:29,346 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:25:10,421 [10] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:25:40,245 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:27:25,907 [8] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:27:41,498 [12] INFO UserEfRepository - Getting user by username a
+2024-06-04 11:27:42,835 [12] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:27:43,494 [12] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:27:43,513 [13] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:28:53,747 [10] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:28:55,859 [7] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:28:55,921 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:27,251 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:29:27,275 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:30,991 [7] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:29:31,003 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:52,169 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:29:52,196 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:53,668 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:29:54,108 [16] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 11:29:54,118 [16] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:54,888 [7] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:29:55,185 [7] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:29:55,196 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:57,582 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:29:58,368 [7] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 11:29:58,378 [7] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:29:58,910 [4] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:29:59,266 [4] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:29:59,273 [4] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:30:00,026 [4] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:30:56,496 [17] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:30:59,783 [14] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 11:30:59,793 [17] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:31:09,337 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:31:09,733 [14] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 11:31:09,743 [14] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:31:10,434 [14] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:31:10,947 [4] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 11:31:10,955 [17] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:33:43,317 [19] INFO StockEfRepository - Getting all stocks
+2024-06-04 11:33:44,151 [20] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 11:33:44,160 [19] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 11:33:45,974 [22] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:03:08,199 [24] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:04:24,755 [24] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:04:33,930 [24] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:04:39,104 [21] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 12:04:39,133 [27] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 12:04:42,947 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:04:43,543 [27] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 12:04:43,558 [27] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 12:04:57,496 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:05:11,030 [27] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:05:15,344 [27] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:05:18,201 [26] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:09:39,414 [29] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:09:42,357 [29] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:10:15,216 [31] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:19:14,773 [23] INFO UserEfRepository - Getting user by username aaa
+2024-06-04 12:19:16,964 [23] ERROR UserController - Failed to login user aaa
+2024-06-04 12:20:35,947 [26] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:20:36,197 [26] ERROR UserController - Failed to register user a StackTrace:    at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 26
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:21:48,368 [28] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:21:48,412 [28] ERROR UserController - Failed to register user a StackTrace:    at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 26
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:27:42,182 [32] ERROR UserController - Failed to register user
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 54
+2024-06-04 12:32:37,480 [6] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:32:39,781 [6] INFO UserEfRepository - Saving user aa
+2024-06-04 12:32:45,802 [6] INFO UserEfRepository - User saved
+2024-06-04 12:32:46,019 [6] ERROR UserController - Failed to register user
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Users.Dob'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Persistence.UnitOfWork.UnitOfWork.SaveChanges() in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\UnitOfWork\UnitOfWork.cs:line 23
+   at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 47
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:36:58,456 [17] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:36:59,715 [17] INFO UserEfRepository - Saving user aa
+2024-06-04 12:37:03,096 [17] INFO UserEfRepository - User saved

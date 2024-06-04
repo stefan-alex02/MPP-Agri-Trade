@@ -1,0 +1,14 @@
+<h1>{{stock.productName}}</h1>
+<p>Category: {{stock.category}}</p>
+<p>Amount: {{stock.amount}} {{stock.unit}}</p>
+<p>Price: ${{stock.price}}</p>
+<p>Producer: {{stock.producerFirstName}} {{stock.producerLastName}}</p>
+<p>Description: {{stock.description}}</p>
+<button mat-button class="product-button" (click)="$event.stopPropagation(); addToCart(stock)">Add to cart</button>
+<h2>Reviews:</h2>
+<div *ngFor="let review of reviews">
+  <p>ID: {{review.reviewId}}</p>
+  <p>From: {{review.fromName}}</p>
+  <p>Rating: {{review.rating}}</p>
+  <p>Description: {{review.description}}</p>
+</div>

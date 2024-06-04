@@ -1,0 +1,72 @@
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.deps.json
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.runtimeconfig.json
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.pdb
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Domain.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Domain.pdb
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.csproj.AssemblyReference.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfoInputs.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfo.cs
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.csproj.CoreCompileInputs.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.sourcelink.json
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persiste.61C28332.Up2Date
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/refint/Persistence.dll
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.pdb
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.genruntimeconfig.cache
+C:/Users/Stefan/Documents/GitHub/UBB-CS-Projects/Semestrul 4/MPP/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/ref/Persistence.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.deps.json
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.runtimeconfig.json
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Persistence.pdb
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Domain.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/bin/Debug/net8.0/Domain.pdb
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.csproj.AssemblyReference.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfoInputs.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.AssemblyInfo.cs
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.csproj.CoreCompileInputs.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.sourcelink.json
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persiste.61C28332.Up2Date
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/refint/Persistence.dll
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.pdb
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/Persistence.genruntimeconfig.cache
+/Users/sebastian/MPP-Agri-Trade/AgriTrade/Persistence/obj/Debug/net8.0/ref/Persistence.dll
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.deps.json
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.dll
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.pdb
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Domain.dll
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Domain.pdb
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfo.cs
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persiste.61C28332.Up2Date
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.dll
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\refint\Persistence.dll
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.pdb
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache
+C:\Users\andre\Documents\GitHub\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.deps.json
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Persistence.pdb
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Domain.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\bin\Debug\net8.0\Domain.pdb
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfo.cs
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persiste.61C28332.Up2Date
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\refint\Persistence.dll
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.pdb
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache
+C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\obj\Debug\net8.0\ref\Persistence.dll

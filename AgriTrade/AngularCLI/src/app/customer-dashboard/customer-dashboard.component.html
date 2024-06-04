@@ -1,0 +1,12 @@
+<div class="stocks-div">
+  <div class="card" *ngFor="let stock of stocks" (click)="navigateToDetails(stock)">
+    <img ngSrc="assets/images/product-icon-placeholder.png" alt="Placeholder" height="512" width="512" priority>
+    <h2 class="title">{{stock.productName}}</h2>
+    <p class="category">{{stock.category}}</p>
+    <p class="amount">{{stock.amount}} {{stock.unit}}</p>
+    <p class="price">${{stock.price}}</p>
+    <p class="producer">{{stock.producerFirstName}} {{stock.producerLastName}}</p>
+    <button mat-button class="product-button" (click)="$event.stopPropagation(); addToCart(stock)">Add to cart</button>
+  </div>
+</div>
+

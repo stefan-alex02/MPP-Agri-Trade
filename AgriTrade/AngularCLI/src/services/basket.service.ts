@@ -15,7 +15,7 @@ export class BasketService {
       found.quantity += 1;
     } else {
       this.basket.push({stock: product, quantity: 1});
-    }
+      localStorage.setItem('basket', JSON.stringify(this.basket));    }
   }
 
   removeProduct(product: Stock): void {
@@ -25,15 +25,18 @@ export class BasketService {
         this.basket[index].quantity -= 1;
       } else {
         this.basket.splice(index, 1);
+        localStorage.setItem('basket', JSON.stringify(this.basket));
       }
     }
   }
 
   getBasket(): {stock: Stock, quantity: number}[] {
+    this.basket = JSON.parse(localStorage.getItem('basket') || '[]');
     return this.basket;
   }
 
   getNumberOfItems() {
+    this.basket = JSON.parse(localStorage.getItem('basket') || '[]');
     return this.basket.length;
   }
 }

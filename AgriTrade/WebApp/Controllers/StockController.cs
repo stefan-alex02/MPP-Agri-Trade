@@ -17,7 +17,7 @@ public class StockController(StockService stockService) : Controller {
         try {
             IEnumerable<StockDto> stocks = stockService.GetAllStocks().Select(s => new StockDto(
                 s.Id, s.Product!.Name!, s.Product.Category!.Name!,
-                s.Amount, s.Unit!, s.Price, s.Producer!.FirstName!, s.Producer!.LastName!,s.Description
+                s.Amount, s.Unit!, s.Price, s.Producer!.FirstName!, s.Producer!.LastName!,s.Description,s.Producer!.Username!
             ));
             
             return Ok(stocks.ToArray());
@@ -46,7 +46,8 @@ public class StockController(StockService stockService) : Controller {
                 stock.Price,
                 stock.Producer!.FirstName!,
                 stock.Producer!.LastName!,
-                stock.Description
+                stock.Description,
+                stock.Producer!.Username!
             );
             
             return Ok(stockDto);

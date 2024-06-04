@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using Business.Services;
+using Domain.Details;
 using log4net;
 using log4net.Config;
 using log4net.Repository.Hierarchy;
@@ -41,6 +42,7 @@ builder.Services
     .AddScoped<IUnitOfWork, UnitOfWork>()
     .AddScoped<UserService>()
     .AddScoped<StockService>()
+    .AddScoped<ReviewService>()
     .AddScoped<RefreshTokenMiddleware>();
 
 // Get the JWT configuration from appsettings.json

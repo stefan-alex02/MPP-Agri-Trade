@@ -13,7 +13,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
     public DbSet<Address> Addresses { get; set; }
     public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<Quantity> Quantities { get; set; }
-    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Review> Review { get; set; }
 
     public DatabaseContext() 
         : this(new DbContextOptionsBuilder<DatabaseContext>().Options) { }
@@ -29,6 +29,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
             .HasOne(q => q.Stock)
             .WithMany()
             .HasForeignKey(q => q.StockId);
+        
         
         modelBuilder.Entity<Quantity>()
             .HasOne(q => q.Order)
@@ -49,5 +50,7 @@ public class DatabaseContext(DbContextOptions<DatabaseContext> options) : DbCont
         modelBuilder.Entity<User>()
             .HasIndex(u => u.Username)
             .IsUnique();
+
+
     }
 }

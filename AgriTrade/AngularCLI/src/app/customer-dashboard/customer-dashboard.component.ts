@@ -48,6 +48,8 @@ export class CustomerDashboardComponent implements OnInit {
 
   addToCart(stock: Stock) {
     this.basketService.addProduct(stock);
+  addToCart(stock: Stock) {
+
   }
 
 }

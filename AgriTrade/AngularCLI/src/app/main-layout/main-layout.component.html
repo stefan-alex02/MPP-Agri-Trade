@@ -24,6 +24,7 @@
   </div>
   <div *ngIf="!authService.isLoggedIn()" class="login-section">
     <button mat-button class="login-button" (click)="pressLogin()">Login</button>
+    <button mat-button routerLink="/register" class="btn btn-primary">Sign up</button>
   </div>
   <div *ngIf="authService.isLoggedIn()" class="logout-section">
     <button mat-button (click)="pressBasket()" class="basket-button">

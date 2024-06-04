@@ -13,7 +13,8 @@ public class UserController(UserService userService, JwtService jwtService) : Co
     public ActionResult<LoginResponse> Login([FromBody] LoginRequest loginRequest) {
         try {
             User user = userService.Login(loginRequest.Username, loginRequest.Password);
-            var token = jwtService.GenerateToken(user.Id, user.Username, user.UserType);
+            var token = jwtService.GenerateToken(user.Id, user.Username, 
+                user.FirstName + " " + user.LastName , user.UserType);
             
             Console.WriteLine($"User {user.Username} logged in with ID {user.Id}");
             
@@ -23,7 +24,7 @@ public class UserController(UserService userService, JwtService jwtService) : Co
             return Ok(loginResponse);
         }
         catch (AuthenticationException e) {
-            return StatusCode(450, e.Message);
+            return NotFound(e.Message);
         }
         catch (Exception e) {
             return BadRequest();
@@ -40,5 +41,38 @@ public class UserController(UserService userService, JwtService jwtService) : Co
         Console.WriteLine("User logging out");
 
         return Ok();
+    }
+    
+    [HttpPost("api/users/register")]
+    public ActionResult<HttpResponse> Register([FromBody] RegisterRequest registerRequest) {
+        try {
+            if (registerRequest.User.Address is null) {
+                userService.Register(registerRequest.User.Username, registerRequest.User.Email, 
+                    registerRequest.User.Password, registerRequest.User.FirstName, 
+                    registerRequest.User.LastName, registerRequest.User.Dob, 
+                    registerRequest.User.UserType, null, null, null, null, null);
+            }
+            else {
+                userService.Register(registerRequest.User.Username, registerRequest.User.Email, 
+                    registerRequest.User.Password, registerRequest.User.FirstName, 
+                    registerRequest.User.LastName, registerRequest.User.Dob, 
+                    registerRequest.User.UserType, registerRequest.User.Address.Number, 
+                    registerRequest.User.Address.Street, registerRequest.User.Address.City, 
+                    registerRequest.User.Address.County, registerRequest.User.Address.ZipCode);
+            }
+            
+            Console.WriteLine($"User {registerRequest.User.Username} registered");
+            
+            return Ok();
+        }
+        catch(ConflictException e) {
+            return StatusCode(409, e.Message);
+        }
+        catch (RegisterException e) {
+            return BadRequest(e.Message);
+        }
+        catch (Exception e) {
+            return BadRequest();
+        }
     }
 }

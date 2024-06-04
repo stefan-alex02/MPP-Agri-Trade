@@ -10,6 +10,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AuthInterceptor} from "../guards/auth.interceptor";
 import {GoogleMapsModule} from "@angular/google-maps";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import {GoogleMapsModule} from "@angular/google-maps";
   ],
   imports: [
     BrowserModule,
+    MatFormFieldModule,
     AppRoutingModule,
     RouterOutlet,
     MatButton,
     HttpClientModule,
     BrowserAnimationsModule,
     GoogleMapsModule,
+    FlexLayoutModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

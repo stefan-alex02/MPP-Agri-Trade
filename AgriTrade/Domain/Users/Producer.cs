@@ -16,12 +16,11 @@ public class Producer : User {
         string password, 
         string firstName, 
         string lastName, 
-        DateOnly dob, 
+        DateOnly? dob, 
         Address? address, 
-        UserType userType, 
         IEnumerable<Review> reviewsReceived, 
         IEnumerable<Stock> stocks) : 
-        base(id, username, email, password, firstName, lastName, dob, address, userType) {
+        base(id, username, email, password, firstName, lastName, dob, address, UserType.Producer) {
         ReviewsReceived = reviewsReceived;
         Stocks = stocks;
     }

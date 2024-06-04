@@ -16,12 +16,11 @@ public class Consumer : User {
         string password, 
         string firstName, 
         string lastName, 
-        DateOnly dob, 
-        Address? address, 
-        UserType userType, 
+        DateOnly? dob, 
+        Address? address,
         IEnumerable<Review> reviewsGiven, 
         IEnumerable<Order> pastOrders) : 
-        base(id, username, email, password, firstName, lastName, dob, address, userType) {
+        base(id, username, email, password, firstName, lastName, dob, address, UserType.Consumer) {
         ReviewsGiven = reviewsGiven;
         PastOrders = pastOrders;
     }

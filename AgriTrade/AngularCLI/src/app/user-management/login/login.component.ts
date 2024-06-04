@@ -3,7 +3,8 @@ import {MatButton} from "@angular/material/button";
 import {MatFormField, MatInput, MatInputModule} from "@angular/material/input";
 import {AuthService} from "../../../services/auth.service";
 import {FormsModule} from "@angular/forms";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,9 @@ import {Router} from "@angular/router";
     MatInput,
     MatInputModule,
     MatFormField,
-    FormsModule
+    FormsModule,
+    RouterLink,
+    NgIf
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -21,6 +24,7 @@ import {Router} from "@angular/router";
 export class LoginComponent {
   username: string = '';
   password: string = '';
+  errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -33,6 +37,7 @@ export class LoginComponent {
       },
       error: (error) => {
         console.error('Login failed:', error);
+        this.errorMessage = 'Login failed. ' + error.error;
       }
     });
   }

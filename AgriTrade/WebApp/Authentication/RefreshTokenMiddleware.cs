@@ -35,10 +35,11 @@ public class RefreshTokenMiddleware(JwtService jwtService, IOptions<JwtOptions> 
                         jwtService.JwtSettings.RefreshWindow.TotalMilliseconds) {
                         int userId = int.Parse(principal.FindFirst("user_id").Value);
                         string username = principal.FindFirst("username").Value;
+                        string name = principal.FindFirst("name").Value;
                         UserType userType = (UserType)int.Parse(principal.FindFirst("user_type").Value);
                         
                         // Generate a new token using the existing claims
-                        var newToken = jwtService.GenerateToken(userId, username, userType);
+                        var newToken = jwtService.GenerateToken(userId, username, name, userType);
 
                         // Set the new token in the response header
                         context.Response.Headers.Authorization = "Bearer " + newToken;

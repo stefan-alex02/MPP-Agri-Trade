@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj": {}
+    "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj": {
+    "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\obj\\",
+        "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\ConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -69,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj": {
+    "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,21 +130,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +158,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj"
+              "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Stefan\\Documents\\GitHub\\UBB-CS-Projects\\Semestrul 4\\MPP\\MPP-Agri-Trade\\AgriTrade\\Domain\\Domain.csproj"
               }
             }
           }
@@ -213,7 +213,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

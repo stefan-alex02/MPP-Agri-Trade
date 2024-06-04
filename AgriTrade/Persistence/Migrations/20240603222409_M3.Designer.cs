@@ -11,7 +11,7 @@ using Persistence.Context;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240603191508_M3")]
+    [Migration("20240603222409_M3")]
     partial class M3
     {
         /// <inheritdoc />
@@ -174,10 +174,6 @@ namespace Persistence.Migrations
                     b.Property<float>("Amount")
                         .HasColumnType("REAL");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<float>("Price")
                         .HasColumnType("REAL");
 
@@ -209,7 +205,7 @@ namespace Persistence.Migrations
                     b.Property<int?>("AddressId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateOnly>("Dob")
+                    b.Property<DateOnly?>("Dob")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

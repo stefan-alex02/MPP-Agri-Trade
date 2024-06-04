@@ -13,10 +13,11 @@ public class JwtService(JwtSettings jwtSettings) {
 
     public JwtSettings JwtSettings { get; } = jwtSettings;
 
-    public string GenerateToken(int userId, string username, UserType userRole) {
+    public string GenerateToken(int userId, string username, string name, UserType userRole) {
         var claims = new[] {
             new Claim("user_id", userId.ToString()),
             new Claim("username", username),
+            new Claim("name", name),
             new Claim("user_type", ((int)userRole).ToString())
         };
 

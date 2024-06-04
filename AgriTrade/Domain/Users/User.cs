@@ -9,7 +9,7 @@ public class User : Entity<int> {
     public string Password { get; set; } = null!;
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
-    public DateOnly Dob { get; set; }
+    public DateOnly? Dob { get; set; }
     public Address? Address { get; set; }
     public UserType UserType { get; set; }
     
@@ -17,7 +17,7 @@ public class User : Entity<int> {
     }
     
     public User(int id, string username, string email, 
-            string password, string firstName, string lastName, DateOnly dob, 
+            string password, string firstName, string lastName, DateOnly? dob, 
             Address? address, UserType userType) : 
         base(id) {
         Username = username;

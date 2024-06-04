@@ -202,7 +202,7 @@ namespace Persistence.Migrations
                     b.Property<int?>("AddressId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateOnly>("Dob")
+                    b.Property<DateOnly?>("Dob")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

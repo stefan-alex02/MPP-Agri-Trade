@@ -1,4 +1,4 @@
-export interface StockDto {
+export interface Stock {
   stockId: number;
   productName: string;
   category: string;

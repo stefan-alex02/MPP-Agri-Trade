@@ -8,6 +8,7 @@ import {CustomerDashboardComponent} from "./customer-dashboard/customer-dashboar
 import {StockDetailsComponent} from "./stock-details/stock-details.component";
 import {ExploreMapComponent} from "./explore-map/explore-map.component";
 import {AuthGuard} from "../guards/auth.guard";
+import {RegisterAccountComponent} from "./user-management/register-account/register-account.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
     component: UserLayoutComponent,
     children: [
       { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterAccountComponent }
     ]
   },
 ];

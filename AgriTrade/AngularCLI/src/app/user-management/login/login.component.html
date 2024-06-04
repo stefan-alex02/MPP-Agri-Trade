@@ -10,7 +10,12 @@
         <mat-label>Password</mat-label>
         <input matInput type="password" placeholder="*******" [(ngModel)]="password" name="password" required>
       </mat-form-field>
+      <p class="error-message" *ngIf="this.errorMessage">{{ errorMessage }}</p>
+
       <button mat-button class="login-button" type="submit" [disabled]="!loginForm.valid">Login</button>
+
+      <br>
+      <p>Don't have an account? <a routerLink="/register">Register here</a></p>
     </form>
   </div>
 </div>

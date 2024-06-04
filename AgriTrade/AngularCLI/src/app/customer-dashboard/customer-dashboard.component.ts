@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StockService } from '../../services/stock.service';
-import { StockDto } from '../../models/stock-dto';
+import { Stock } from '../../models/stock';
 import {NgForOf, NgOptimizedImage} from "@angular/common";
 import {MatButton} from "@angular/material/button";
 import {Router} from "@angular/router";
@@ -17,7 +17,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./customer-dashboard.component.css']
 })
 export class CustomerDashboardComponent implements OnInit {
-  stocks: StockDto[] = [];
+  stocks: Stock[] = [];
 
   constructor(private stockService: StockService, private router: Router) { }
 
@@ -37,13 +37,13 @@ export class CustomerDashboardComponent implements OnInit {
     });
   }
 
-  navigateToDetails(stock: StockDto) {
+  navigateToDetails(stock: Stock) {
     console.log('navigating to stock details');
     this.router.navigate(['/stocks', stock.stockId])
       .then(r => console.log('navigated to stock details'));
   }
 
-  addToCart(stock: StockDto) {
+  addToCart(stock: Stock) {
 
   }
 

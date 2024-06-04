@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StockService } from '../../services/stock.service';
-import { StockDto } from '../../models/stock-dto';
+import { Stock } from '../../models/stock';
 
 @Component({
   selector: 'app-stock-details',
@@ -10,7 +10,7 @@ import { StockDto } from '../../models/stock-dto';
   styleUrls: ['./stock-details.component.css']
 })
 export class StockDetailsComponent implements OnInit {
-  stock: StockDto = {} as StockDto;
+  stock: Stock = {} as Stock;
 
   constructor(
     private route: ActivatedRoute,

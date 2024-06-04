@@ -12,6 +12,6 @@
   align-items: center;
 }
 
-.alert {
+.alert, .error-message {
   color: red;
 }

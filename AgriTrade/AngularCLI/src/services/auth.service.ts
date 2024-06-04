@@ -5,6 +5,7 @@ import config from '../config.json';
 import {jwtDecode} from "jwt-decode";
 import moment from 'moment';
 import {UserType} from "../models/user-type";
+import {UserDetails} from "../models/user-details";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ import {UserType} from "../models/user-type";
 export class AuthService {
   private loginUrl = config.baseUrl + '/api/users/login';
   private logoutUrl = config.baseUrl + '/api/users/logout';
+  private registerUrl = config.baseUrl + '/api/users/register';
 
   constructor(private http: HttpClient) {}
 
@@ -31,6 +33,10 @@ export class AuthService {
         this.clearJwtToken();
       })
     );
+  }
+
+  registerAccount(userData: UserDetails): Observable<any> {
+    return this.http.post(this.registerUrl, {User: userData});
   }
 
   saveJwtToken(token: string): void {

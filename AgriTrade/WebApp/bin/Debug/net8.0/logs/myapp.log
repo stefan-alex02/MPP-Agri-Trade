@@ -341,3 +341,30 @@
 2024-06-04 12:09:39,414 [29] INFO StockEfRepository - Getting all stocks
 2024-06-04 12:09:42,357 [29] INFO StockEfRepository - Getting all stocks
 2024-06-04 12:10:15,216 [31] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:45:34,676 [16] INFO UserEfRepository - Getting user by username aaaa
+2024-06-04 12:45:37,633 [12] INFO UserEfRepository - Getting user by username aaaa
+2024-06-04 12:45:38,456 [20] INFO UserEfRepository - Getting user by username aaaa
+2024-06-04 12:46:00,644 [18] INFO UserEfRepository - Getting user by username aaa
+2024-06-04 12:46:07,917 [20] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:46:12,925 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:46:13,914 [20] INFO StockEfRepository - Getting stock by id 2
+2024-06-04 12:46:13,951 [21] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 12:46:15,557 [21] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:46:20,588 [19] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:46:59,882 [20] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:47:03,035 [19] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:49:10,346 [23] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:49:59,570 [27] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:51:19,955 [25] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:51:26,205 [31] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:53:07,323 [31] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:53:19,424 [32] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:53:19,435 [32] INFO UserEfRepository - Saving user aa
+2024-06-04 12:53:19,488 [32] INFO UserEfRepository - User saved
+2024-06-04 12:53:29,667 [32] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:53:53,913 [33] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:54:50,568 [33] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:55:19,758 [35] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:55:20,624 [33] INFO StockEfRepository - Getting stock by id 1
+2024-06-04 12:55:20,648 [36] INFO ReviewEfRepository - Getting all reviews
+2024-06-04 12:57:05,210 [36] INFO UserEfRepository - Getting user by username b

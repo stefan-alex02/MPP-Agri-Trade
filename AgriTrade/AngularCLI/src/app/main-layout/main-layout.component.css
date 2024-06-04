@@ -1,6 +1,18 @@
+/* Style for background */
+.background {
+  background-image: url('/assets/images/background-image.png');
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(8px);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
 /* Style for navbar */
 .navbar {
-  background-color: #fff6eb;
+  background-color: #fff6eb; /* Light brown background */
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -10,8 +22,10 @@
 /* Style for navbar brand */
 .navbar-brand {
   font-weight: bold; /* Bold text */
+  color: #8b4513; /* Saddle brown text */
 }
 
+/* Style for navbar navigation */
 .navbar-nav {
   display: flex; /* Display list items in a row */
   list-style: none;
@@ -19,41 +33,76 @@
   margin: 0;
 }
 
+/* Style for navbar items */
 .nav-item {
-  margin-right: 10px; /* Add space between buttons */
+  margin-right: 10px; /* Add space between items */
 }
 
+/* Style for navbar buttons */
 .nav-button {
   background-color: transparent; /* Transparent background */
   border: none; /* Remove border */
-  color: #007bff; /* Bootstrap primary color */
+  color: #8b4513; /* Saddle brown text */
   cursor: pointer; /* Pointer cursor on hover */
   padding: 5px 10px; /* Add padding */
 }
 
 .nav-button:hover {
   text-decoration: underline; /* Underline on hover */
+  color: #a0522d; /* Darker brown text on hover */
 }
 
 /* Style for navbar links */
 .nav-link {
   margin-right: 15px; /* Add some spacing between links */
-  color: #007bff; /* Bootstrap primary color */
+  color: #8b4513; /* Saddle brown text */
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
+  color: #a0522d; /* Darker brown text on hover */
 }
 
+/* Style for login section */
 .login-section {
   /*position: absolute;*/
   /*right: 10px;*/
 }
 
+/* Style for content section */
 #content1 {
+  background-color: rgba(255, 248, 240, 0.9); /* Lighter brown with opacity */
+  padding: 20px;
+  margin: 20px 100px;
+  height: 80vh;
+  box-sizing: border-box;
+  border-radius: 5px;
   text-align: center;
+  border: 2px solid #a0522d; /* Darker brown border */
 }
 
+/* Style for login button */
+.login-button {
+  background-color: #8b4513; /* Saddle brown background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+  background-color: #a0522d; /* Darker brown on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.login-button:active {
+  background-color: #5a2e0d; /* Even darker brown on click */
+  transform: scale(1);
+}
+
+/* Style for paragraph */
 p {
   font-style: italic;
   text-align: center;

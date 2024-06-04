@@ -1,5 +1,5 @@
 .background {
-  background-image: url('../../assets/images/background-image.jpg');
+  background-image: url('/assets/images/background-image.png');
   background-size: cover;
   background-attachment: fixed;
   filter: blur(8px);
@@ -10,11 +10,32 @@
 }
 
 #content1 {
-  background-color: rgba(255, 255, 255, 0.8); /* white with 50% opacity */
+  background-color: rgba(255, 248, 240, 0.9); /* lighter brown with opacity */
   padding: 20px;
   margin: 20px 100px;
   height: 80vh;
   box-sizing: border-box;
   border-radius: 5px;
   text-align: center;
+  border: 2px solid #a0522d; /* darker brown border */
+}
+
+.login-button {
+  background-color: #8b4513; /* normal button color - saddle brown */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+  background-color: #a0522d; /* darker brown on hover */
+  transform: scale(1.05); /* slight zoom effect */
+}
+
+.login-button:active {
+  background-color: #5a2e0d; /* even darker brown on click */
+  transform: scale(1);
 }

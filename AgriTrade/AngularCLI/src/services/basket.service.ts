@@ -13,9 +13,11 @@ export class BasketService {
     const found = this.basket.find(item => item.stock.productName === product.productName);
     if (found) {
       found.quantity += 1;
+      localStorage.setItem('basket', JSON.stringify(this.basket));
     } else {
       this.basket.push({stock: product, quantity: 1});
-      localStorage.setItem('basket', JSON.stringify(this.basket));    }
+      localStorage.setItem('basket', JSON.stringify(this.basket));
+    }
   }
 
   removeProduct(product: Stock): void {
@@ -23,6 +25,7 @@ export class BasketService {
     if (index !== -1) {
       if (this.basket[index].quantity > 1) {
         this.basket[index].quantity -= 1;
+        localStorage.setItem('basket', JSON.stringify(this.basket));
       } else {
         this.basket.splice(index, 1);
         localStorage.setItem('basket', JSON.stringify(this.basket));

@@ -9,4 +9,5 @@ export interface Stock {
   producerLastName: string;
   productDescription: string;
   description: string;
+  producerUsername: string;
 }

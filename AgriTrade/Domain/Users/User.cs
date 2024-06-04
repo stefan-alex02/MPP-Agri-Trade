@@ -9,6 +9,7 @@ public class User : Entity<int> {
     public string Password { get; set; } = null!;
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
+    
     public DateOnly? Dob { get; set; }
     public Address? Address { get; set; }
     public UserType UserType { get; set; }

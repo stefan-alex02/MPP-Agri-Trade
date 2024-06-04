@@ -1,4 +1,5 @@
 ﻿using Business.Services;
+using log4net;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models.DTO;
@@ -6,6 +7,8 @@ using WebApp.Models.DTO;
 namespace WebApp.Controllers;
 
 public class ReviewController(ReviewService reviewService) : Controller {
+    private static readonly ILog log = LogManager.GetLogger("ReviewController");
+    
     [HttpGet("api/reviews")]
     [Authorize]
     public ActionResult<ReviewDto[]> GetReviews() {
@@ -21,6 +24,7 @@ public class ReviewController(ReviewService reviewService) : Controller {
             return Ok(reviews.ToArray());
         }
         catch (Exception e) {
+            log.ErrorFormat("Failed to get reviews", e);
             return BadRequest(e.Message);
         }
     }
@@ -40,6 +44,7 @@ public class ReviewController(ReviewService reviewService) : Controller {
             return Ok(reviews.ToArray());
         }
         catch (Exception e) {
+            log.ErrorFormat("Failed to get top 5 reviews", e);
             return BadRequest(e.Message);
         }
     }

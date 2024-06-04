@@ -1,6 +1,7 @@
 ﻿using Business.Exceptions;
 using Business.Services;
 using Domain.Users;
+using log4net;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Authentication;
@@ -9,6 +10,8 @@ using WebApp.Models;
 namespace WebApp.Controllers;
 
 public class UserController(UserService userService, JwtService jwtService) : Controller {
+    private static readonly ILog log = LogManager.GetLogger("UserController");
+    
     [HttpPost("api/users/login")]
     public ActionResult<LoginResponse> Login([FromBody] LoginRequest loginRequest) {
         try {
@@ -24,9 +27,11 @@ public class UserController(UserService userService, JwtService jwtService) : Co
             return Ok(loginResponse);
         }
         catch (AuthenticationException e) {
+            log.ErrorFormat("Failed to login user {0}", loginRequest.Username);
             return NotFound(e.Message);
         }
         catch (Exception e) {
+            log.Error("Failed to login user", e);
             return BadRequest();
         }
     }
@@ -66,12 +71,17 @@ public class UserController(UserService userService, JwtService jwtService) : Co
             return Ok();
         }
         catch(ConflictException e) {
+            log.ErrorFormat("Failed to register user {0} StackTrace: {1}", 
+                registerRequest.User.Username, e.StackTrace);
             return StatusCode(409, e.Message);
         }
         catch (RegisterException e) {
+            log.ErrorFormat("Failed to register user {0} StackTrace: {1}", 
+                registerRequest.User.Username, e.StackTrace);
             return BadRequest(e.Message);
         }
         catch (Exception e) {
+            log.Error("Failed to register user", e);
             return BadRequest();
         }
     }

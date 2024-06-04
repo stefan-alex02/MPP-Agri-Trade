@@ -114,9 +114,19 @@ export class RegisterAccountComponent implements OnInit {
         zipCode: +formValue.address.zipCode
     } : null;
 
-    const dob = new Date(formValue.dob);
-    const dobUTC = new Date(Date.UTC(dob.getFullYear(), dob.getMonth(), dob.getDate()));
-    const dobString = dobUTC.toISOString().split('T')[0];
+    let dateValue = formValue.dob
+
+    let dobString : string | null = null;
+    if (isNaN(new Date(dateValue).getTime())) {
+      // The value is not a valid date
+      console.error('Invalid date value:', dateValue);
+    } else {
+      // The value is a valid date
+      const dob = new Date(formValue.dob);
+      let dobUTC = new Date(Date.UTC(dob.getFullYear(), dob.getMonth(), dob.getDate()));
+      const dobString = dobUTC.toISOString().split('T')[0];
+    }
+
 
     // Create a UserDetails object from the form values
     const userDetails: UserDetails = {

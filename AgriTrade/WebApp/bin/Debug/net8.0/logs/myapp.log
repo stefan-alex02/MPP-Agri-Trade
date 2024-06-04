@@ -341,3 +341,43 @@
 2024-06-04 12:09:39,414 [29] INFO StockEfRepository - Getting all stocks
 2024-06-04 12:09:42,357 [29] INFO StockEfRepository - Getting all stocks
 2024-06-04 12:10:15,216 [31] INFO StockEfRepository - Getting all stocks
+2024-06-04 12:19:14,773 [23] INFO UserEfRepository - Getting user by username aaa
+2024-06-04 12:19:16,964 [23] ERROR UserController - Failed to login user aaa
+2024-06-04 12:20:35,947 [26] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:20:36,197 [26] ERROR UserController - Failed to register user a StackTrace:    at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 26
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:21:48,368 [28] INFO UserEfRepository - Getting user by username a
+2024-06-04 12:21:48,412 [28] ERROR UserController - Failed to register user a StackTrace:    at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 26
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:27:42,182 [32] ERROR UserController - Failed to register user
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 54
+2024-06-04 12:32:37,480 [6] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:32:39,781 [6] INFO UserEfRepository - Saving user aa
+2024-06-04 12:32:45,802 [6] INFO UserEfRepository - User saved
+2024-06-04 12:32:46,019 [6] ERROR UserController - Failed to register user
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Users.Dob'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.Storage.NonRetryingExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Persistence.UnitOfWork.UnitOfWork.SaveChanges() in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Persistence\UnitOfWork\UnitOfWork.cs:line 23
+   at Business.Services.UserService.Register(String username, String email, String password, String firstName, String lastName, Nullable`1 dob, UserType userType, Nullable`1 addressNumber, String addressStreet, String addressCity, String addressCounty, Nullable`1 addressZipCode) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\Business\Services\UserService.cs:line 47
+   at WebApp.Controllers.UserController.Register(RegisterRequest registerRequest) in C:\Users\Stefan\Documents\GitHub\UBB-CS-Projects\Semestrul 4\MPP\MPP-Agri-Trade\AgriTrade\WebApp\Controllers\UserController.cs:line 55
+2024-06-04 12:36:58,456 [17] INFO UserEfRepository - Getting user by username aa
+2024-06-04 12:36:59,715 [17] INFO UserEfRepository - Saving user aa
+2024-06-04 12:37:03,096 [17] INFO UserEfRepository - User saved

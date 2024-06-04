@@ -3,7 +3,7 @@ import {Address} from "./address";
 export interface UserDetails {
   username: string;
   email: string;
-  dob: string;
+  dob: string | null;
   firstName: string;
   lastName: string;
   password: string;

@@ -13,6 +13,9 @@ public class UserEfRepository(IDatabaseContext context) : IUserRepository, IDisp
     public void Add(User entity) {
         log.InfoFormat("Saving user {0}", entity.Username);
         context.Users.Add(entity);
+        if (entity.Address is not null) {
+            context.Addresses.Add(entity.Address);
+        }
         log.Info("User saved");
     }
 

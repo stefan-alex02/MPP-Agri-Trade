@@ -1,5 +1,6 @@
 ﻿using Business.Services;
 using Domain.Products;
+using log4net;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models.DTO;
@@ -7,6 +8,8 @@ using WebApp.Models.DTO;
 namespace WebApp.Controllers;
 
 public class StockController(StockService stockService) : Controller {
+    private static readonly ILog log = LogManager.GetLogger("StockController");
+    
     [HttpGet("api/stocks")]
     [Authorize]
     public ActionResult<StockDto[]> GetStocks() {
@@ -23,6 +26,7 @@ public class StockController(StockService stockService) : Controller {
             return Ok(stocks.ToArray());
         }
         catch (Exception e) {
+            log.ErrorFormat("Failed to get stocks", e);
             return BadRequest(e.Message);
         }
     }
@@ -53,6 +57,7 @@ public class StockController(StockService stockService) : Controller {
             return Ok(stockDto);
         }
         catch (Exception e) {
+            log.ErrorFormat("Failed to get stock by id {0}", id, e);
             return BadRequest(e.Message);
         }
     }

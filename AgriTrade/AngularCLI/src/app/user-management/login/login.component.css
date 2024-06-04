@@ -1,17 +1,144 @@
+/* Style for login container */
 .login-container {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #fff6eb; /* Light brown background */
+}
+
+/* Style for form and gears container */
+.form-and-gears {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* This will make the container take the full height of the viewport */
+  width: 33.33%; /* One-third of the container */
+  padding: 20px;
+  background-color: rgba(255, 248, 240, 0.9); /* Lighter brown with opacity */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* For positioning gears in the background */
+}
+
+/* Style for form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
 }
 
 .form-container form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-.alert, .error-message {
+.full-width {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Style for machine */
+#machine {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Style for gears */
+.gear {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background:
+    radial-gradient(circle at 5% 5%, transparent 20px, #a0522d 21px, transparent 30px), /* Brown */
+    radial-gradient(circle at 50% -10px, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 95% 5%, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 110px 50%, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 95% 95%, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 50% 110px, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 5% 95%, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at -10px 50%, transparent 20px, #a0522d 21px, transparent 30px),
+    radial-gradient(circle at 50% 50%, transparent 25px, #a0522d 26px, transparent 50px);
+  z-index: -1; /* Ensure gears are behind the form */
+}
+
+.gear:nth-child(1) {
+  transform: scale(.75) translate(45%, 45%) rotate(22.5deg);
+  animation: roll1 3s linear infinite;
+}
+
+@keyframes roll1 {
+  100% {
+    transform: scale(.75) translate(45%, 45%) rotate(-341.5deg);
+  }
+}
+
+.gear:nth-child(2) {
+  transform: translateX(100%);
+  animation: roll2 3s linear infinite;
+}
+
+@keyframes roll2 {
+  100% {
+    transform: translateX(100%) rotate(359deg);
+  }
+}
+
+.gear:nth-child(3) {
+  transform: scale(.75) translate(180%,-20%) rotate(22.5deg);
+  animation: roll3 3s linear infinite;
+}
+
+@keyframes roll3 {
+  100% {
+    transform: scale(.75) translate(180%,-20%) rotate(-341.5deg);
+  }
+}
+/* Style for image container */
+.image-container {
+  width: 66.66%; /* Two-thirds of the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px); /* Blur effect */
+}
+
+/* Style for login button */
+.login-button {
+  background-color: #8b4513; /* Saddle brown background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #a0522d; /* Darker brown on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.login-button:active {
+  background-color: #5a2e0d; /* Even darker brown on click */
+  transform: scale(1);
+}
+
+/* Style for alert */
+.alert {
   color: red;
+  margin-top: 10px;
 }
